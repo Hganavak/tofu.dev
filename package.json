@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href \"https://hganavak.github.io/redesign/index.html\" && ngh"
+    "deploy": "ng build --prod --base-href \"https://tofu.dev/redesign\" && ngh"
   },
   "private": true,
   "dependencies": {
