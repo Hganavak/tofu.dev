@@ -1,0 +1,16 @@
+$nav-bar-height: 10vh;
+$padding-between-navbar-links: 10px;
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: $nav-bar-height;
+    padding: 0 10% 0 10%; // Add some spacing to the left/right of the navbar
+}
+
+nav a {
+    padding: $padding-between-navbar-links;
+    text-decoration: none;
+}
