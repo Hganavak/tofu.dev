@@ -17,6 +17,9 @@ section {
     grid-template-rows: 20% 80%;
     padding: 0 5% 0 5%;
 
+    background-image: url(../../assets/images/header-banner-footer.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .home-banner > * {
@@ -44,4 +47,8 @@ section {
     background-image: url(../../assets/images/me.svg);
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+#portfolio {
+    background-color: $tofu-blue;
 }
