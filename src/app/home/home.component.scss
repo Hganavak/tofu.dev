@@ -6,3 +6,24 @@
 section {
     height: 100vh;
 }
+
+.home-banner  {
+    display: grid;
+    grid-template-areas:
+        "title title"
+        "description banner-img";
+    grid-template-rows: 30% 70%;
+
+}
+
+#title {
+    grid-area: title;
+}
+
+#description {
+    grid-area: description;
+}
+
+#banner-img {
+    grid-area: banner-img;
+}

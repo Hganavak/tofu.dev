@@ -1,3 +1,5 @@
+@import '../../styles.scss';
+
 $navbar-height: 10vh;
 $padding-between-navbar-links: 10px;
 
@@ -8,9 +10,11 @@ nav {
 
     height: $navbar-height;
     padding: 0 10% 0 10%; // Add some spacing to the left/right of the navbar
+    color: $tofu-blue;
 }
 
 nav a {
     padding: $padding-between-navbar-links;
     text-decoration: none;
+    color: $tofu-blue;
 }
