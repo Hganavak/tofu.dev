@@ -5,6 +5,13 @@ $tofu-blue: #88CDFF;
 
 html {
     font-family: 'Roboto', sans-serif;
+    color: #2b2b2b;
+}
+
+h1, h2 {
+    font-family: 'Michroma', sans-serif;
+    letter-spacing: 0.25em;
+    font-size: 2em;
 }
 
 $header-height: 90vh; // The height for the first element after the navbar on pages
