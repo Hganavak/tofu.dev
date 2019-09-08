@@ -1,2 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~normalize.css';
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+$header-height: 90vh; // The height for the first element after the navbar on pages
+header  {
+    height: $header-height;
+    background-color: red;
+}
