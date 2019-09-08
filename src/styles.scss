@@ -2,6 +2,7 @@
 @import '~normalize.css';
 
 $tofu-blue: #88CDFF;
+$impact-font: 'Michroma', sans-serif;
 
 html {
     font-family: 'Roboto', sans-serif;
@@ -9,7 +10,7 @@ html {
 }
 
 h1, h2 {
-    font-family: 'Michroma', sans-serif;
+    font-family: $impact-font;
     letter-spacing: 0.25em;
     font-size: 2em;
 }
@@ -17,4 +18,13 @@ h1, h2 {
 $header-height: 90vh; // The height for the first element after the navbar on pages
 header  {
     height: $header-height;
+}
+
+.cta {
+    background-color: $tofu-blue;
+    color: #fff;
+    font-family: $impact-font;
+    padding: 1em 2em 1em 2em;
+    border-radius: 5px;
+    border: none;
 }
