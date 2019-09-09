@@ -18,6 +18,7 @@ h1, h2 {
 $header-height: 90vh; // The height for the first element after the navbar on pages
 header  {
     height: $header-height;
+    font-variant: small-caps;
 }
 
 .cta {
