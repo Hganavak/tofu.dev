@@ -50,8 +50,8 @@ section {
 }
 
 #portfolio {
-    background-color: $tofu-blue;
-    color: white;
+    background-color: $tofu-primary;
+    color: $tofu-secondary;
 
     display: grid;
     grid-template-columns: 100%;
@@ -85,25 +85,74 @@ section {
 }
 
 #about {
-    background-color: $tofu-blue;
+    background-color: $tofu-primary;
 }
 
-.portfolio-item:nth-of-type(odd) {
-    background-color: $tofu-blue;
+
+.portfolio-item {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 20% 20%;
+    grid-row-gap: 1em;
+    grid-template-areas: 
+        "preview-img"
+        "item-description"
+        "item-cta";
+
+    .preview-img {
+        padding-top: 5%;
+        grid-area: preview-img;
+
+        .preview-img-picture {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .item-description {
+        width: 50%;
+        font-family: $impact-font;
+        line-height: 2em;
+        font-variant: small-caps;
+        letter-spacing: 0.1em;
+        grid-area: item-description;
+    }
+
+    .item-cta {
+        grid-area: item-cta;
+    }
+
+    & > * {
+        text-align: center;
+    }
+
+    &:nth-of-type(even) {
+        background-color: $tofu-secondary;
+    }
+
+    &:nth-of-type(odd) {
+        background-color: $tofu-primary;
+        color: $tofu-secondary;
+    }
+
+
 }
+
 
 footer {
     height: 100vh;
     background-image: url(../../assets/images/moonlight.svg);
     background-size: contain;
     background-position: bottom;
-    background-color: $tofu-blue;
+    background-color: $tofu-primary;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 
     h3 {
-        color: white;
+        color: $tofu-secondary;
     }
 }

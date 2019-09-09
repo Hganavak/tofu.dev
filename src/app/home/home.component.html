@@ -29,11 +29,11 @@
       </div>
       <div id="portfolio-buttons">
           <form [routerLink]="['/portfolio']">
-              <input class="cta cta-white" type="submit" value="View Projects" style="margin: 0 10px 0 10px"/>
+              <input class="cta cta-secondary" type="submit" value="View Projects" style="margin: 0 10px 0 10px"/>
             </form>
 
           <form action="https://github.com/Hganavak">
-              <input class="cta cta-white" type="submit" value="View GitHub Profile" />
+              <input class="cta cta-secondary" type="submit" value="View GitHub Profile" />
           </form>
 
       </div>
@@ -41,12 +41,38 @@
   </section>
 
   <section class="portfolio-item">
-    Portfolio item 1
+    <div class="preview-img">
+      <img src="../../assets/images/portfolio-item.png" class="preview-img-picture">
+    </div>
+    <div class="item-description">
+      <h2>ResearchHub</h2>
+      <p>The ResearchHub connects you with people, resources, and services from across the University to enhance and accelerate your research.</p>
+    </div>
+    <div class="item-cta">
+        <form action="/portfolio">
+            <input class="cta cta-secondary" type="submit" value="View Project" />
+        </form>
+  </div>
   </section>
 
   <section class="portfolio-item">
-    Portfolio item 1
+    <div class="preview-img">
+      <img src="../../assets/images/portfolio-item.png" class="preview-img-picture">
+    </div>
+    <div class="item-description">
+      <h2>Tofu.dev</h2>
+      <p>What's a better example of my design process than my personal website?</p>
+    </div>
+    <div class="item-cta">
+        <form action="/portfolio">
+            <input class="cta cta-secondary" type="submit" value="View Project" />
+        </form>
+  </div>
   </section>
+
+
+
+
 
   <section>
     <h1>Blog</h1>

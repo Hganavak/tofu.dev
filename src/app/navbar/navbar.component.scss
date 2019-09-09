@@ -12,16 +12,16 @@ nav {
 
     height: $navbar-height;
     padding: 0 10% 0 10%; // Add some spacing to the left/right of the navbar
-    color: $tofu-blue;
+    color: $tofu-primary;
 }
 
 nav a {
     padding: $padding-between-navbar-links;
     text-decoration: none;
-    color: $tofu-blue;
+    color: $tofu-primary;
 }
 
 nav a:hover {
-    border-bottom: 1px solid $tofu-blue;
+    border-bottom: 1px solid $tofu-primary;
     padding-bottom: 5px;
 }
