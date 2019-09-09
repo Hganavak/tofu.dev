@@ -87,3 +87,23 @@ section {
 #about {
     background-color: $tofu-blue;
 }
+
+.portfolio-item:nth-of-type(odd) {
+    background-color: $tofu-blue;
+}
+
+footer {
+    height: 100vh;
+    background-image: url(../../assets/images/moonlight.svg);
+    background-size: contain;
+    background-position: bottom;
+    background-color: $tofu-blue;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    h3 {
+        color: white;
+    }
+}
