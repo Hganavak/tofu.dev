@@ -9,10 +9,14 @@ html {
     color: #2b2b2b;
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5 {
     font-family: $impact-font;
+    font-variant: small-caps;
     letter-spacing: 0.25em;
-    font-size: 2em;
+}
+
+form {
+    display: inline-block;
 }
 
 $header-height: 90vh; // The height for the first element after the navbar on pages
@@ -21,6 +25,15 @@ header  {
     font-variant: small-caps;
 }
 
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+}
+
+
 .cta {
     background-color: $tofu-blue;
     color: #fff;
@@ -28,4 +41,13 @@ header  {
     padding: 1em 2em 1em 2em;
     border-radius: 5px;
     border: none;
+}
+
+.cta:hover {
+    cursor: pointer;
+    padding: 1.1em 2.2em 1.1em 2.2em;
+}
+
+.cta-white {
+    border: 1px solid white;
 }

@@ -51,4 +51,39 @@ section {
 
 #portfolio {
     background-color: $tofu-blue;
+    color: white;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 80% 15%;
+    padding: 0 10% 0 10%;
+    justify-items: center;
+
+    #portfolio-center {
+        background-image: url(../../assets/images/product_tour.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        justify-self: stretch;
+
+        display: grid;
+        grid-template-rows: 65% 35%;
+
+        #caption {
+            text-align: center;
+            font-family: $impact-font;
+            line-height: 1.5em;
+            font-variant: small-caps;
+            letter-spacing: 0.1em;
+            font-weight: bold;
+        }
+
+        #portfolio-buttons {
+            text-align: center;
+        }
+    }
+}
+
+#about {
+    background-color: $tofu-blue;
 }

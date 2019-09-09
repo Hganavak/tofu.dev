@@ -15,7 +15,36 @@
 </header>
 
 <main class="sections">
-  <section id="portfolio">Portfolio</section>
-  <section>Blog</section>
-  <section>About</section>
+
+  <section id="portfolio">
+    <div id="portfolio-title">
+      <h1>Portfolio</h1>
+    </div>
+    <div id="portfolio-center">
+      <div></div>
+      <div id="caption">
+        <h3>My Work</h3>
+        <p>Scroll down for a list of recent projects.</p>
+        <p>Alternatively you can check out my GitHub profile.</p>
+      </div>
+      <div id="portfolio-buttons">
+          <form [routerLink]="['/portfolio']">
+              <input class="cta cta-white" type="submit" value="View Projects" style="margin: 0 10px 0 10px"/>
+            </form>
+
+          <form action="https://github.com/Hganavak">
+              <input class="cta cta-white" type="submit" value="View GitHub Profile" />
+          </form>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h1>Blog</h1>
+  </section>
+
+  <section id="about">
+    <h1>About</h1>
+  </section>
 </main>
