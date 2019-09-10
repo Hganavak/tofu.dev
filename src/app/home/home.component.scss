@@ -84,9 +84,57 @@ section {
     }
 }
 
+#blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #about {
     background-color: $tofu-primary;
-    // background-image: linear-gradient($tofu-primary, $tofu-secondary);
+    // background-color: black;
+    color: white;
+    width: 100%;
+    display: grid;
+
+    grid-row-gap: 1em;
+    justify-items: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 35% 25% 35%;
+    grid-template-areas: 
+        "me-title"
+        "me"
+        "me-description"
+        "me-cta";
+
+    h1 {
+        padding-top: 1em;
+        grid-area: me-title;
+    }
+
+    & > * {
+        text-align: center;
+    }
+
+    .me {
+        grid-area: me;
+        align-self: center;
+        height: 100%;
+    }
+
+    .me-description {
+        width: 30%;
+        font-family: $impact-font;
+        line-height: 2em;
+        font-variant: small-caps;
+        letter-spacing: 0.1em;
+        grid-area: me-description;
+    }
+
+    .me-cta {
+        grid-area: me-cta;
+    }
 }
 
 
@@ -144,10 +192,9 @@ section {
 
 footer {
     height: 30vh;
-    background-image: url(../../assets/images/moonlight.svg), linear-gradient($tofu-primary, $tofu-primary, $tofu-third);
+    background-image: url(../../assets/images/moonlight.svg), linear-gradient($tofu-primary, $tofu-third);
     background-size: contain;
     background-position: bottom;
-    // background-color: $tofu-primary;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
