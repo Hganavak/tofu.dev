@@ -54,3 +54,34 @@ a.button {
 .cta-secondary {
     border: 1px solid $tofu-secondary;
 }
+
+/**************************/
+// Size/Media Query Mixins /
+/**************************/
+@mixin size($size) {
+
+    /* Extra small devices (phones, 600px and down) */
+    @if $size == extra-small {
+        @media only screen and (max-width: 599px) { @content; }
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @if $size == small {
+        @media only screen and (min-width: 600px) { @content; }
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @if $size == medium {
+        @media only screen and (min-width: 768px) { @content; }
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @if $size == large {
+        @media only screen and (min-width: 992px) { @content; }
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @if $size == extra-large {
+        @media only screen and (min-width: 1200px) { @content; }
+    }
+}
