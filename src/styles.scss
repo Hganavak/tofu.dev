@@ -1,15 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~normalize.css';
 
+// Theme colors
 $tofu-primary: #88CDFF;
 $tofu-secondary: white;
 $tofu-third: #2F2E41;
 
+// Fonts
 $impact-font: 'Michroma', sans-serif;
+$base-font-color: #2b2b2b;
 
 html {
     font-family: 'Roboto', sans-serif;
-    color: #2b2b2b;
+    color: $base-font-color;
 }
 
 h1, h2, h3, h4, h5 {
@@ -43,14 +46,16 @@ a.button {
     font-family: $impact-font;
     padding: 1em 2em 1em 2em;
     border-radius: 5px;
-    border: none;
+    border: none; // TODO: Refactor. Set to white + block sizing
 }
 
 .cta:hover {
     cursor: pointer;
     padding: 1.1em 2.2em 1.1em 2.2em;
+    // TODO: Add color switch
 }
 
+// TODO: Refactor. Secondary but not needed (white border match)
 .cta-secondary {
     border: 1px solid $tofu-secondary;
 }
@@ -65,9 +70,9 @@ a.button {
         @media only screen and (max-width: 599px) { @content; }
     }
 
-    /* Small devices (portrait tablets and large phones, 600px and up) */
+    /* Small devices (portrait tablets and large phones, 640px and up) */
     @if $size == small {
-        @media only screen and (min-width: 600px) { @content; }
+        @media only screen and (min-width: 640px) { @content; }
     }
 
     /* Medium devices (landscape tablets, 768px and up) */
