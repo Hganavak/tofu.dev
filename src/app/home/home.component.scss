@@ -14,6 +14,7 @@ section {
     background-image: url(../../assets/images/header-banner-footer.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-x: 5%;
     padding: 0 5% 0 5%;
 
     grid-template-rows: auto;
@@ -22,13 +23,13 @@ section {
         "title"
         "banner-img"
         "description";
-    font-size: smaller;
 
     @include size(large) {
         grid-template-areas:
-            "title banner-img"
+            "title title"
             "description banner-img";
         grid-template-rows: 20% 80%;
+        grid-template-columns: 50% 50%;
     }
 
 }
@@ -48,6 +49,10 @@ section {
     grid-area: description;
     line-height: 2.5em;
 
+    @include size(large) {
+        line-height: 4.5em;
+    }
+
     #name-and-title {
         margin: 2em 0 4em 0;
     }
@@ -58,11 +63,7 @@ section {
     background-image: url(../../assets/images/me.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
-
-    @include size(small) {
-
-    }
+    background-position: bottom center;
 }
 
 #portfolio {
@@ -72,7 +73,7 @@ section {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 5% 80% 15%;
-    padding: 0 10% 0 10%;
+    padding: 2.5% 10% 0 10%;
     justify-items: center;
 
     #portfolio-center {
