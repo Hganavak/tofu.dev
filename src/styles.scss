@@ -15,6 +15,10 @@ html {
     color: $base-font-color;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 h1, h2, h3, h4, h5 {
     font-family: $impact-font;
     font-variant: small-caps;
@@ -25,7 +29,8 @@ form {
     display: inline-block;
 }
 
-$header-height: 90vh; // The height for the first element after the navbar on pages
+$header-height: 95vh; // The height for the first element after the navbar on pages
+
 header  {
     height: $header-height;
     font-variant: small-caps;

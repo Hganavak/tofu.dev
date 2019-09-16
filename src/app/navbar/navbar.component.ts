@@ -20,5 +20,4 @@ export class NavbarComponent implements OnInit {
       x.className = "topnav";
     }
   }
-
 }
