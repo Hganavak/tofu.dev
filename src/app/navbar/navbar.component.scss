@@ -3,10 +3,10 @@
 $navbar-height: 5vh;
 $padding-between-navbar-links: 10px;
 
-
 .topnav {
-    // margin-bottom: 3em;
     background-color: $tofu-primary;
+    font-variant: small-caps;
+    letter-spacing: 0.25em;
 
     a {
         display: block;
@@ -44,9 +44,11 @@ $padding-between-navbar-links: 10px;
 
     .topnav {
         background-color: $tofu-secondary;
+        padding: 1em 5% 0 0;
 
         a {
             color: $tofu-primary;
+            font-size: 20px;
 
             &:not(:first-child) {
                 display: inline-block;
@@ -57,9 +59,19 @@ $padding-between-navbar-links: 10px;
                 display: none;
             }
 
+            &:hover {
+                border-bottom: 1px solid $tofu-primary;
+                padding-bottom: 10px;
+            }
+
+            // Add a | after all links except the last
+            &:not(:last-of-type):after {
+                content: " | ";
+            }
         } 
     }
 
+    // Align the navigation items to the right
     #menu-items {
         text-align: right;
     }
