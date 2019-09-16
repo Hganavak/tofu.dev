@@ -44,7 +44,8 @@ $padding-between-navbar-links: 10px;
 
     .topnav {
         background-color: $tofu-secondary;
-        padding: 1em 5% 0 0;
+        margin: 1em 5% 0 0;
+        letter-spacing: 0.5em;
 
         a {
             color: $tofu-primary;
