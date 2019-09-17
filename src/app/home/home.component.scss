@@ -14,8 +14,9 @@ section {
     background-image: url(../../assets/images/header-banner-footer.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: 5%;
+    background-position-x: 8%;
     padding: 3em 5% 0 5%;
+    font-size: smaller;
 
     grid-template-rows: auto;
     grid-template-columns: auto;
@@ -25,6 +26,7 @@ section {
         "description";
 
     @include size(large) {
+        font-size: medium;
         background-position-x: 0;
         grid-template-areas:
             "title title"
@@ -48,14 +50,19 @@ section {
 
 #description {
     grid-area: description;
-    line-height: 2.25em;
+    line-height: 2em;
 
     @include size(large) {
         line-height: 2.5em;
+
+        #name-and-title {
+            margin: 2em 0 8em 0;
+        }
+
     }
 
     #name-and-title {
-        margin: 2em 0 4em 0;
+        // margin: 2em 0 4em 0;
     }
 }
 
