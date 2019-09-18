@@ -227,7 +227,6 @@ section {
 
     }
 
-
     .item-description {
         order: 2;
         grid-area: item-description;
@@ -250,6 +249,11 @@ section {
     &:nth-of-type(odd) {
         background-color: $tofu-primary;
         color: $tofu-secondary;
+
+        .preview-img-picture {
+            box-shadow: 5px 10px 95px $tofu-secondary;
+        }
+
     }
 
     @include size(large) {
