@@ -103,8 +103,6 @@ section {
         justify-self: stretch;
 
         align-items: end;
-        // font-size: medium;
-
 
         @include size(medium) {
             align-items: end;
@@ -127,20 +125,15 @@ section {
             @include size(medium) {
                 align-self: bottom;
             }
-
-
         }
 
         #portfolio-buttons {
-            align-self: center;
             text-align: center;
+            align-self: center;
 
             @include size(large) {
                 align-self: baseline;
             }
-
-
-
 
             input {
                 margin-top: 1em;
@@ -204,33 +197,106 @@ section {
     }
 }
 
-
 .portfolio-item {
-    display: grid;
-    width: 100%;
-    justify-items: center;
-    grid-template-columns: 100%;
-    grid-template-rows: 60% 20% 20%;
-    grid-row-gap: 1em;
-    grid-template-areas: 
-        "preview-img"
-        "item-description"
-        "item-cta";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    padding: 5%;
 
-    .preview-img {
-        padding-top: 5%;
-        grid-area: preview-img;
 
-        .preview-img-picture {
-            width: 100%;
-            height: 100%;
+    .item-title {
+        order: 0;
+    }
+
+    .preview-img-picture {
+        box-shadow: 5px 10px 95px $tofu-primary;
+        border-radius: 2%;
+        width: auto;
+        max-width: 80%;
+        max-height: 70%;
+
+        order: 1;
+
+        &.mobile {
+            display: none;
         }
     }
 
     .item-description {
+        order: 2;
 
-        @include size(large) {
-            width: 50%;
+        font-family: $impact-font;
+        line-height: 2em;
+        font-variant: small-caps;
+        letter-spacing: 0.1em;
+     }
+
+     .item-cta {
+         order: 3;
+     }
+
+
+    &:nth-of-type(even) {
+        background-color: $tofu-secondary;
+    }
+
+    &:nth-of-type(odd) {
+        background-color: $tofu-primary;
+        color: $tofu-secondary;
+    }
+}
+
+/*
+.portfolio-item {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 70% 30%;
+    align-items: center;
+
+    // grid-template-areas: 
+    //     "preview-img"
+    //     "item-description"
+    //     "item-cta";
+
+    grid-template-areas: 
+        "item-description preview-img"
+        "item-cta preview-img";
+    padding: 0% 5% 0 0%;
+
+    .preview-img {
+        grid-area: preview-img;
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-evenly;
+        align-items: center;
+
+        .preview-img-picture {
+            border-radius: 2%;
+
+            @include size(medium) {
+                width: 65%;
+            }
+
+            box-shadow: 5px 10px 95px $tofu-primary;
+
+            &.mobile {
+                width: 25%;
+            }
+        }
+    }
+
+    .item-description {
+        margin-top: 15%;
+        margin-left: 15%;
+
+        @include size(medium) {
+            // width: 25%;
         }
 
         font-family: $impact-font;
@@ -257,6 +323,7 @@ section {
         color: $tofu-secondary;
     }
 }
+*/
 
 footer {
     height: 30vh;
