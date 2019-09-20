@@ -147,6 +147,14 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+
+    text-align: center;
+    padding: 0 5% 0 5%;
+
+
 }
 
 #about {
@@ -284,20 +292,5 @@ section {
             align-self: start;
         }
 
-    }
-}
-
-footer {
-    height: 30vh;
-    background-image: url(../../assets/images/moonlight.svg), linear-gradient($tofu-primary, $tofu-third);
-    background-size: contain;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-
-    h3 {
-        color: $tofu-secondary;
     }
 }

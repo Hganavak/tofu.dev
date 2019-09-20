@@ -36,6 +36,15 @@ header  {
     font-variant: small-caps;
 }
 
+a {
+    color: $tofu-primary;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
