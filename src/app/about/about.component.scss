@@ -9,10 +9,10 @@ section, header {
     background-image: url(../../assets/images/header-banner-footer.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: 8%;
+    background-position-x: 10%;
     padding-top: 3em;
 
-    grid-template-rows: 5% 25% 65%;
+    grid-template-rows: 5% 20% 75%;
     grid-template-columns: auto;
 
     grid-template-areas:
@@ -20,16 +20,21 @@ section, header {
         "about-img"
         "description";
 
-    @include size(large) {
+    @include size(medium) {
         padding-top: 0;
         font-size: medium;
-        background-position-x: 0;
+        background-position-x: 10%;
         grid-template-areas:
             "title title"
             "description about-img";
         grid-template-rows: 20% 80%;
+        grid-template-columns: 60% 40%;
+    }
+
+    @include size(large) {
         grid-template-columns: 50% 50%;
     }
+
 
     #title {
         grid-area: title;
@@ -45,6 +50,7 @@ section, header {
         background-size: contain;
         background-position: center;
         margin-top: 1em;
+        margin-left: 2em;
     }
 
     #description {
@@ -61,14 +67,17 @@ section, header {
             border: 1px solid $tofu-primary;
             box-sizing: border-box;
             border-radius: 5px; 
-            padding: 5px 10px;
+            padding: 5px 15px;
             font-variant: small-caps;
         }
 
         table {
+            th {
+                padding-bottom: 2em;
+            }
             td {
                 padding-bottom: 0.5em;
-                
+
                 @include size(large) {
                     padding-bottom: 1em;
                 }
@@ -76,8 +85,10 @@ section, header {
         }
 
         #contact {
+            padding-top: 1em;
+
             @include size(large) {
-                padding-top: 3em;
+                padding-top: 1em;
             }
 
             display: flex;
