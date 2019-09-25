@@ -5,7 +5,9 @@ $navbar-height: 10vh;
 .topnav {
     background-color: $tofu-primary;
     font-variant: small-caps;
+
     letter-spacing: 0.25em;
+    
 
     a {
         display: block;
@@ -44,7 +46,12 @@ $navbar-height: 10vh;
     .topnav {
         background-color: $tofu-secondary;
         padding: 1em 5% 0 0;
-        letter-spacing: 0.5em;
+        letter-spacing: 0.35em;
+
+        @include size(large) {
+            letter-spacing: 0.5em;
+        }
+
         height: $navbar-height;
 
         a {
