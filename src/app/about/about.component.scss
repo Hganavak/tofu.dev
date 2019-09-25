@@ -17,6 +17,7 @@ header {
     background-size: cover;
     background-position-x: 10%;
     padding-top: 3em;
+    font-size: smaller;
 
     grid-template-rows: 5% 20% 75%;
     grid-template-columns: auto;
@@ -64,6 +65,8 @@ header {
         display: flex;
         justify-self: center;
         padding-top: 1em;
+        width: 100%;
+        box-sizing: border-box;
 
         h4 {
             margin: 0;
@@ -75,9 +78,10 @@ header {
             border-radius: 5px; 
             padding: 5px 15px;
             font-variant: small-caps;
+            width: 100%;
         }
 
-        table {
+       table {
             th {
                 padding-bottom: 2em;
             }
