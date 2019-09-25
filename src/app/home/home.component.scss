@@ -15,6 +15,12 @@ section {
     height: 100vh;
 }
 
+header {
+    @include size(medium) {
+        height: $header-height-responsive;
+    }
+}
+
 .home-banner  {
     display: grid;
     background-image: url(../../assets/images/header-banner-footer.svg);

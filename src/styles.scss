@@ -29,13 +29,6 @@ form {
     display: inline-block;
 }
 
-$header-height: 90vh; // The height for the first element after the navbar on pages
-
-header  {
-    height: $header-height;
-    font-variant: small-caps;
-}
-
 a {
     color: $tofu-primary;
     text-decoration: none;
@@ -127,4 +120,12 @@ a.button {
     @if $size == extra-large {
         @media only screen and (min-width: 1200px) { @content; }
     }
+}
+
+$header-height: 95vh; // The height for the first element after the navbar on pages
+$header-height-responsive: 90vh; // The height for the first element after the navbar on pages on larger devices
+
+header  {
+    height: $header-height;
+    font-variant: small-caps;
 }

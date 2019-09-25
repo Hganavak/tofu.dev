@@ -1,5 +1,6 @@
 @import '../../styles.scss';
 
+$navbar-mobile-height: 5vh;
 $navbar-height: 10vh;
 
 .topnav {
@@ -7,6 +8,7 @@ $navbar-height: 10vh;
     font-variant: small-caps;
 
     letter-spacing: 0.25em;
+    min-height: $navbar-mobile-height;
     
 
     a {
@@ -52,7 +54,7 @@ $navbar-height: 10vh;
             letter-spacing: 0.5em;
         }
 
-        height: $navbar-height;
+        min-height: $navbar-height;
 
         a {
             color: $tofu-primary;
