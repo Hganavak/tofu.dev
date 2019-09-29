@@ -4,6 +4,22 @@ section, header {
     padding: 0 5% 0 5%;
 }
 
+section {
+    height: 100vh;
+
+    // TODO: Move this stuff into base styles.scss
+    &:nth-of-type(even) {
+        background-color: $tofu-secondary;
+    }
+
+    &:nth-of-type(odd) {
+        background-color: $tofu-primary;
+        color: $tofu-secondary;
+    }
+
+
+}
+
 header {
     @include size(medium) {
         height: $header-height-responsive;
@@ -106,6 +122,67 @@ header {
             align-items: center;
         }
     }
+
+}
+
+#technologies {
+    display: grid;
+    grid-template-rows: 10% 30% 60%;
+    grid-template-areas:
+        "technology-title"
+        "technology-icons"
+        "technology-description";
+    justify-items: center;
+    align-items: center;
+
+    @include size(large) {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 15% 85%;
+        grid-template-areas:
+            "technology-title technology-title"
+            "technology-description technology-icons";
+        align-items: start;
+        justify-content: start;
+    }
+
+    #technology-title {
+        grid-area: technology-title;
+    }
+    
+    #technology-icons {
+        grid-area: technology-icons;
+        margin: 0 10% 0 10%;
+        padding: 0;
+        background-image: url(../../assets/images/technologies.svg);
+
+        // Background only div needs to be allocated space
+        align-self: stretch;
+        justify-self: stretch;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        @include size(large) {
+            background-position: top;
+        }
+     }
+
+     #technology-description {
+         padding-top: 10%;
+         grid-area: technology-description;
+         align-self: start;
+         text-align: center;
+         line-height: 1.5em;
+         letter-spacing: 0.5px;
+
+         @include size(large) {
+             padding-top: 0;
+             align-self: start;
+             width: 75%;
+             font-size: large;
+         }
+     }
 
 }
   
