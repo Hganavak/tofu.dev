@@ -150,18 +150,54 @@ header {
     }
     
     #technology-icons {
+        display: grid;
         grid-area: technology-icons;
+        height: 100%;
+        width: 100%;
+
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
+        grid-template-areas: "icon-pictures";
+
+
+        // Enable caption on larger devices
+        @include size(large) {
+            grid-template-rows: 60% 40%;
+            grid-template-areas:
+                "icon-pictures"
+                "icon-caption";
+            text-align: center;
+        }
+
+        #icon-pictures {
+            grid-area: icon-pictures;
+            background-image: url(../../assets/images/technologies.svg);
+
+            // Background only div needs to be allocated space
+            align-self: stretch;
+            justify-self: stretch;
+
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            margin-top: 5%;
+            @include size(large) { margin-top: 0; }
+        }
+
+        #icon-caption {
+            grid-area: icon-caption;
+            font-variant: small-caps;
+            // font-size: larger;
+            text-align: center;
+            padding: 1.5em 15% 5%;
+            line-height: 1.75em;
+            letter-spacing: 0.15em;
+        }
+
         margin: 0 10% 0 10%;
         padding: 0;
-        background-image: url(../../assets/images/technologies.svg);
 
-        // Background only div needs to be allocated space
-        align-self: stretch;
-        justify-self: stretch;
 
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
 
         @include size(large) {
             background-position: top;
