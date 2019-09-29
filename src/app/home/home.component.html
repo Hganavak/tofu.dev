@@ -30,11 +30,11 @@
       </div>
       <div id="portfolio-buttons">
           <form [routerLink]="['/portfolio']">
-              <input class="cta cta-secondary" type="submit" value="View Projects" style="margin: 0 10px 0 10px"/>
-            </form>
+            <input class="cta cta-secondary" type="submit" value="View Projects" style="margin: 0 10px 0 10px"/>
+          </form>
 
           <form action="https://github.com/Hganavak">
-              <input class="cta cta-secondary" type="submit" value="View GitHub Profile" />
+            <input class="cta cta-secondary" type="submit" value="View GitHub Profile" />
           </form>
       </div>
     </div>
@@ -51,8 +51,8 @@
     <img src="./assets/images/research-hub.png" class="preview-img-picture">
     <img src="./assets/images/research-hub-mobile.png" class="preview-img-picture mobile">
     <div class="item-cta">
-        <form action="/portfolio">
-            <input class="cta cta-secondary" type="submit" value="View Project" />
+        <form [routerLink]="['/portfolio']">
+          <input class="cta cta-secondary" type="submit" value="View Project" />
         </form>
       </div>
   </section>
@@ -67,7 +67,7 @@
     <img src="./assets/images/tofu-dot-dev.png" class="preview-img-picture">
     <img src="./assets/images/tofu-dot-dev-mobile.png" class="preview-img-picture mobile">
     <div class="item-cta">
-        <form action="/portfolio">
+        <form [routerLink]="['/portfolio']">
             <input class="cta cta-secondary" type="submit" value="View Project" />
         </form>
       </div>
@@ -93,7 +93,7 @@
     </div>
 
     <div class="me-cta">
-        <form action="/about">
+        <form [routerLink]="['/about']">
             <input class="cta cta-secondary" type="submit" value="About Me" />
         </form>
     </div>
