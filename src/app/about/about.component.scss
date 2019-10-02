@@ -157,8 +157,8 @@ header {
 
         grid-template-columns: 100%;
         grid-template-rows: 100%;
-        grid-template-areas: "icon-pictures";
-
+        grid-template-areas: 
+            "icon-pictures";
 
         // Enable caption on larger devices
         @include size(large) {
@@ -181,6 +181,7 @@ header {
             background-size: contain;
             background-position: center;
             margin-top: 5%;
+
             @include size(large) { margin-top: 0; }
         }
 
@@ -192,12 +193,13 @@ header {
             padding: 1.5em 15% 5%;
             line-height: 1.75em;
             letter-spacing: 0.15em;
+
+            display: none;
+            @include size(large) { display: grid; }
         }
 
-        margin: 0 10% 0 10%;
+        // margin: 0 10% 0 10%;
         padding: 0;
-
-
 
         @include size(large) {
             background-position: top;
@@ -211,6 +213,8 @@ header {
          text-align: center;
          line-height: 1.5em;
          letter-spacing: 0.5px;
+         font-variant: small-caps;
+         padding: 10% 5% 0 5%;
 
          @include size(large) {
              padding-top: 0;
@@ -222,3 +226,64 @@ header {
 
 }
   
+#about-me {
+    display: grid;
+    // background-image: linear-gradient($tofu-secondary, $tofu-secondary, $tofu-secondary, $tofu-primary);
+
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: 10% 40% 50%;
+    grid-template-areas:
+        "about-me-title"
+        "about-me-map"
+        "about-me-description";
+
+    @include size(large) {
+        padding: 5% 5% 5%;
+        align-items: center;
+        grid-template-rows: 10% 90%; 
+        grid-template-columns: 40% 60%;
+        grid-template-areas:
+            "about-me-title about-me-map"
+            "about-me-description about-me-map";
+    }
+
+    #me {
+        border-bottom: 3px solid $tofu-primary;
+    }
+    
+    #about-me-title {
+        grid-area: about-me-title;
+    }
+
+    #about-me-map {
+
+        grid-area: about-me-map;
+        align-self: stretch;
+        justify-self: stretch;
+
+        iframe {
+            border-radius: 3%;
+            width: 100% !important;
+            height: 100% !important;
+
+            @include size(large) {
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+
+    #about-me-description {
+        grid-area: about-me-description;
+        text-align: center;
+        line-height: 1.5em;
+        letter-spacing: 0.5px;
+        font-variant: small-caps;
+
+        @include size(large) {
+            width: 75%;
+        }
+    }
+
+}
