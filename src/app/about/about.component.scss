@@ -285,5 +285,62 @@ header {
             width: 75%;
         }
     }
+}
 
+#publications {
+    display: grid;
+    text-align: center;
+    height: auto;
+    align-items: start;
+
+    min-height: 100vh;
+    grid-template-rows: 5% 95%;
+    @include size(large) {
+        grid-template-rows: 15% 85%;
+    }
+
+    padding: 1em 5% 5%;
+
+    #publications-title {
+        // align-self: start;
+    }
+
+    #publication-cards-container {
+        display: grid;
+
+        justify-content: space-between;
+        align-items: stretch;
+        align-items: start;
+
+        grid-gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-auto-rows: 1fr;
+
+        .publication-card {
+            display: grid;
+            border-radius: 3%;
+
+            padding: 2rem;
+
+            @include size(large) {
+                padding: 3rem;
+                border-radius: 8%;
+            }
+
+            background-color: $tofu-secondary;
+            color: #000;
+
+            p {
+                line-height: 1.25em;
+                @include size(large) { line-height: 1.5em; }
+                text-align: justify;
+            }
+
+            h3 {
+                border-bottom: 1px solid $tofu-primary;
+                padding-bottom: 1.5em;
+            }
+
+        }
+    }
 }
