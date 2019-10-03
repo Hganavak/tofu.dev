@@ -238,6 +238,10 @@ header {
         "about-me-map"
         "about-me-description";
 
+    @include size(medium) {
+        grid-template-rows: 15% 40% 55%;
+    }
+
     @include size(large) {
         padding: 5% 5% 5%;
         align-items: center;

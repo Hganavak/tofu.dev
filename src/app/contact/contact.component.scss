@@ -1,6 +1,95 @@
-@import '../../styles.scss';section {
+@import '../../styles.scss';
 
-.me-cta {
-    margin-top: 1em;
+header {
+    padding: 0 5% 0 5%;
+
+    @include size(medium) {
+        height: $header-height-responsive;
+    }
+}
+
+.contact-banner {
+    display: grid;
+
+    background-image: url(../../assets/images/header-banner-footer.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 10%;
+    padding-top: 3em;
+
+    grid-template-rows: 10% 60% 30%;
+    grid-template-columns: auto;
+
+    align-items: start;
+    justify-content: center;
+
+    font-size: smaller;
+    text-align: center;
+
+    grid-template-areas:
+        "contact-title"
+        "contact-form"
+        "contact-img";
+
+    @include size(medium) {
+        p { font-size: large; width: 75%; margin: auto auto; }
+        font-size: medium;
+        letter-spacing: 0.10em;
+        line-height: 1.75em;
+    }
+
+    @include size(large) {
+        grid-template-rows: 20% 80%;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "contact-title contact-title"
+            "contact-form contact-img";
+        padding-top: 0;
+    }
+
+    #contact-title {
+        grid-area: contact-title;
+        background-image: url(../../assets/images/header-contact-title.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        align-self: stretch;
+    }
+
+    #contact-img {
+        grid-area: contact-img;
+        background-image: url(../../assets/images/contact-me.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom center;
+        align-self: stretch;
+        margin-bottom: 20px;
+    }
+
+    #contact-form {
+        grid-area: contact-form;
+        position: relative;
+
+        @include size(large) {
+            padding-top: 2em;
+            margin-right: 3em;
+        }
+
+        input[type="email"], textarea {
+            border: 1px solid $tofu-primary;
+            box-sizing: border-box;
+            border-radius: 5px; 
+            padding: 5px 15px;
+            width: 100%;
+
+            &::placeholder {
+                font-variant: small-caps;
+            }
+        }
+
+        button {
+            margin-top: 0.8em;
+        }
+
+
     }
 }
