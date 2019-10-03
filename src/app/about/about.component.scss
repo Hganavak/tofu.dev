@@ -295,6 +295,11 @@ header {
 
     min-height: 100vh;
     grid-template-rows: 5% 95%;
+
+    @include size(medium) {
+        grid-template-rows: 10% 90%;
+    }
+
     @include size(large) {
         grid-template-rows: 15% 85%;
     }
@@ -302,7 +307,7 @@ header {
     padding: 1em 5% 5%;
 
     #publications-title {
-        // align-self: start;
+        align-self: center;
     }
 
     #publication-cards-container {
@@ -310,17 +315,16 @@ header {
 
         justify-content: space-between;
         align-items: stretch;
-        align-items: start;
 
         grid-gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
         grid-auto-rows: 1fr;
 
         .publication-card {
             display: grid;
             border-radius: 3%;
-
             padding: 2rem;
+
 
             @include size(large) {
                 padding: 3rem;
