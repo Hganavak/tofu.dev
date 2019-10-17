@@ -18,7 +18,7 @@
     <h4>{{ blogPost.summary }}</h4>
     <strong>Tags:</strong>
     <span *ngFor="let tag of blogPost.tags"> {{ tag }} </span>
-    <p>{{ blogPost.body }}</p>
+    <div [innerHtml]="blogPost.body | mdToHtml"></div>
   </div>
 
 </section>

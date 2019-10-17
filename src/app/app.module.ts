@@ -10,6 +10,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { FooterComponent } from './footer/footer.component';
+import { MdToHtmlPipe } from './md-to-html.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     PortfolioComponent,
     AboutComponent,
     BlogComponent,
-    FooterComponent
+    FooterComponent,
+    MdToHtmlPipe
   ],
   imports: [
     BrowserModule,

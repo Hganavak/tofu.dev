@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from '../contentful.service';
 import { Observable } from 'rxjs';
+// import { MdToHtmlPipe } from '../md-to-html.pipe';
 
 @Component({
   selector: 'app-blog',
