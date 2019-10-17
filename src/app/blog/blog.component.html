@@ -10,3 +10,15 @@
   </div>
 
 </section>
+
+<section style="text-align: center">
+
+  <div *ngIf="blogPost$ | async as blogPost">
+    <h1>{{ blogPost.title }}</h1>
+    <h4>{{ blogPost.summary }}</h4>
+    <strong>Tags:</strong>
+    <span *ngFor="let tag of blogPost.tags"> {{ tag }} </span>
+    <p>{{ blogPost.body }}</p>
+  </div>
+
+</section>
