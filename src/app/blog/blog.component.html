@@ -39,14 +39,25 @@
 <section id="blog-items-container" *ngIf="blogPosts$ | async as blogPosts">
 
   <div class="blog-item-card" *ngFor="let blogPost of blogPosts">
-      <h3>{{ blogPost.title }}</h3>
-      <h4>{{ blogPost.summary }}</h4>
-      <div id="tags">
-        <strong>Tags:</strong>
-        <span *ngFor="let tag of blogPost.tags"> {{ tag }} </span>
-      </div>
- 
 
+      <div class="blog-item-img">
+        <img src="../../assets/images/filler_laptop.jpg" style=""  width="100%" />
+      </div>
+
+      <h2 class="title">{{ blogPost.title }}</h2>
+
+      <div class="created">{{ blogPost.created }} </div>
+
+      <div id="tags">
+        <strong>Tags:&nbsp;</strong>
+        <span *ngFor="let tag of blogPost.tags" style="border: 1px solid #88cdff; border-radius: 3px; padding: 2px 7px; margin: 0 3px;"> {{ tag }} </span>
+      </div>
+
+      <h4 class="summary">{{ blogPost.summary }}</h4>
+ 
+      <form action="">
+        <input class="cta" type="submit" value="Read" />
+      </form>
 
   </div>
 

@@ -29,31 +29,57 @@ header {
 
 #blog-items-container {
     display: grid;
+    height: auto;
+    min-height: auto;
 
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: stretch;
 
-    grid-template-columns: repeat(auto-fit, minmax(380px, 480px));
-    grid-template-rows: repeat(auto-fit, minmax(480px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(349px, 350px));
+    grid-auto-rows: 580px;
     grid-row-gap: 3rem;
 
     padding-bottom: 5%;
     background-image: url(../../assets/images/header-banner-footer.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    // background-position-y: 80%;
-    // background-position-x: -50%;
 
     .blog-item-card {
         display: grid;
-        border-radius: 3%;
-        padding: 2rem;
+        border-radius: 0 0 3% 3%;
         border: solid 1px $tofu-primary;
+        text-align: center;
+
+        grid-template-rows: 45% 10% 5% 10% 20% 10%;
+        box-shadow: 5px 15px 35px $tofu-primary;
+
+        &>* {
+            // border: solid 1px blue;
+        }
+
+        .title {
+            align-self: start;
+        }
+
+        .created {
+            align-self: start;
+            color: $tofu-primary;
+        }
+
+        .summary {
+            // align-self: center;
+        }
+
+        // Everything in the card except the image
+        :not(:first-child) {
+            // padding: 0 5%;
+            margin: 0 5%;
+        }
 
 
         @include size(large) {
-            padding: 3rem;
-            border-radius: 8%;
+            // padding: 3rem 3rem;
+            // border-radius: 8%;
         }
 
         background-color: $tofu-secondary;
@@ -63,6 +89,11 @@ header {
             line-height: 1.25em;
             @include size(large) { line-height: 1.5em; }
             text-align: justify;
+        }
+
+        form {
+            justify-self: end;
+            align-self: start;
         }
 
     }

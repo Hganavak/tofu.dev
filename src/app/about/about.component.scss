@@ -323,6 +323,7 @@ header {
         grid-gap: 2rem;
         grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
         grid-auto-rows: 1fr;
+        box-shadow: 5px 10px 95px $tofu-primary;
 
         .publication-card {
             display: grid;
