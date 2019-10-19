@@ -1,7 +1,70 @@
 @import '../../styles.scss';
 
-section {
-    .me-cta {
-        margin-top: 1em;
+section, header {
+    padding: 0 5% 0 5%;
+}
+
+header {
+    @include size(medium) {
+        height: $header-height-responsive;
+    }
+}
+
+.blog-banner {
+    height: auto; // Blog about header doesn't take up 100vh
+
+    #title {
+        background-image: url(../../assets/images/header-blog-title.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-height: 150px;
+    }
+
+    #subtitle {
+        padding: 3vh 0;
+        font-variant: small-caps;
+    }
+
+}
+
+#blog-items-container {
+    display: grid;
+
+    justify-content: space-between;
+    align-items: stretch;
+
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(480px, 1fr));
+    // grid-auto-rows: 1fr;
+
+    padding: 5% 15%;
+
+    .blog-item-card {
+        display: grid;
+        border-radius: 3%;
+        padding: 2rem;
+        border: solid 1px $tofu-primary;
+
+
+        @include size(large) {
+            padding: 3rem;
+            border-radius: 8%;
+        }
+
+        background-color: $tofu-secondary;
+        color: #000;
+
+        p {
+            line-height: 1.25em;
+            @include size(large) { line-height: 1.5em; }
+            text-align: justify;
+        }
+
+        h3 {
+            border-bottom: 1px solid $tofu-primary;
+            padding-bottom: 1.5em;
+        }
+
     }
 }

@@ -1,4 +1,4 @@
-<section class="stub-page">
+<!-- <section class="stub-page">
   <h1>Blog</h1>
   <h2>Coming Soon...</h2>
   <p>If you're really interested in what I have to say, you can check out the old Tofu.dev archive.</p>
@@ -9,22 +9,39 @@
       </form>
   </div>
 
-</section>
+</section> -->
 
-<section style="text-align: center; background-color: #ffccff">
+<!-- <section style="text-align: center"> -->
 
   <!-- Container for all the blog posts -->
-  <div *ngIf="blogPosts$ | async as blogPosts">
+  <!-- <div *ngIf="blogPosts$ | async as blogPosts"> -->
 
     <!-- Individual blog post -->
-    <div *ngFor="let blogPost of blogPosts">
-      <h1>{{ blogPost.title }}</h1>
-      <h4>{{ blogPost.summary }}</h4>
-      <strong>Tags:</strong>
-      <span *ngFor="let tag of blogPost.tags"> {{ tag }} </span>
+    <!-- <div *ngFor="let blogPost of blogPosts"> -->
+      <!-- <h3>{{ blogPost.title }}</h3> -->
+      <!-- <h4>{{ blogPost.summary }}</h4> -->
+      <!-- <strong>Tags:</strong> -->
+      <!-- <span *ngFor="let tag of blogPost.tags"> {{ tag }} </span> -->
       <!-- <div [innerHtml]="blogPost.body | mdToHtml"></div> -->
-    </div>
+    <!-- </div> -->
 
+  <!-- </div> -->
+
+<!-- </section> -->
+
+<header class="blog-banner">
+  <div id="title"></div><!-- Blog Title Image -->
+  <div id="subtitle">
+    <h2>Interested in what I've got to say? That's weird, but okay.</h2>
   </div>
+</header>
+
+<section id="blog-items-container">
+
+  <div class="blog-item-card">Here's a blog item</div>
+  <div class="blog-item-card">Here's another blog item</div>
+  <div class="blog-item-card">Here's something else a blog item</div>
+
+
 
 </section>
