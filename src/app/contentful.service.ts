@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import * as contentful from 'contentful';
 import { environment } from 'src/environments/environment';
 import { Observable, from } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { markViewDirty } from '@angular/core/src/render3/instructions';
 
 @Injectable({
@@ -30,5 +30,16 @@ export class ContentfulService {
     this.client.getEntry(contentId)
       .then(entry => console.log(entry));
   }
+
+  // Get all entries of type
+  getEntries(contentType: string) {
+    return from(this.client.getEntries({ 'content_type': contentType })).pipe(
+      map(entries => entries.items.map(entry => entry.fields)),
+      tap(x => console.log(x))
+    );
+  }
+
+
+  
 
 }

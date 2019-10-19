@@ -15,7 +15,8 @@ export class BlogComponent implements OnInit {
   constructor(private contentfulService: ContentfulService) { }
 
   ngOnInit() {
-    this.contentfulService.logContent('5qCY28J8NjC0XVIE4UU9HN');
+    // this.contentfulService.logContent('5qCY28J8NjC0XVIE4UU9HN');
+    this.contentfulService.getEntries('blogPost').subscribe();
     this.blogPost$ = this.contentfulService.getContent('5qCY28J8NjC0XVIE4UU9HN');
   }
 
