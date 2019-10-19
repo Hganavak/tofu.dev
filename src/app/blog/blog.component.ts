@@ -11,12 +11,13 @@ import { Observable } from 'rxjs';
 export class BlogComponent implements OnInit {
 
   blogPost$: Observable<any>;
+  blogPosts$: Observable<any>;
 
   constructor(private contentfulService: ContentfulService) { }
 
   ngOnInit() {
     // this.contentfulService.logContent('5qCY28J8NjC0XVIE4UU9HN');
-    this.contentfulService.getEntries('blogPost').subscribe();
+    this.blogPosts$ = this.contentfulService.getEntries('blogPost');
     this.blogPost$ = this.contentfulService.getContent('5qCY28J8NjC0XVIE4UU9HN');
   }
 

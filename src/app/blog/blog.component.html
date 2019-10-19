@@ -11,14 +11,20 @@
 
 </section>
 
-<section style="text-align: center">
+<section style="text-align: center; background-color: #ffccff">
 
-  <div *ngIf="blogPost$ | async as blogPost">
-    <h1>{{ blogPost.title }}</h1>
-    <h4>{{ blogPost.summary }}</h4>
-    <strong>Tags:</strong>
-    <span *ngFor="let tag of blogPost.tags"> {{ tag }} </span>
-    <div [innerHtml]="blogPost.body | mdToHtml"></div>
+  <!-- Container for all the blog posts -->
+  <div *ngIf="blogPosts$ | async as blogPosts">
+
+    <!-- Individual blog post -->
+    <div *ngFor="let blogPost of blogPosts">
+      <h1>{{ blogPost.title }}</h1>
+      <h4>{{ blogPost.summary }}</h4>
+      <strong>Tags:</strong>
+      <span *ngFor="let tag of blogPost.tags"> {{ tag }} </span>
+      <!-- <div [innerHtml]="blogPost.body | mdToHtml"></div> -->
+    </div>
+
   </div>
 
 </section>
