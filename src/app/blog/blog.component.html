@@ -41,7 +41,7 @@
   <div class="blog-item-card" *ngFor="let blogPost of blogPosts">
 
       <div class="blog-item-img">
-        <img src="../../assets/images/filler_laptop.jpg" style=""  width="100%" />
+        <img src="{{ blogPost.image.fields.file.url }}" style="width: 100%; height: 100%"  width="100%" />
       </div>
 
       <h2 class="title">{{ blogPost.title }}</h2>
@@ -53,7 +53,7 @@
         <span *ngFor="let tag of blogPost.tags" style="border: 1px solid #88cdff; border-radius: 3px; padding: 2px 7px; margin: 0 3px;"> {{ tag }} </span>
       </div>
 
-      <h4 class="summary">{{ blogPost.summary }}</h4>
+      <h5 class="summary">{{ blogPost.summary }}</h5>
  
       <form action="">
         <input class="cta" type="submit" value="Read" />

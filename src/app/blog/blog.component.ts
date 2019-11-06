@@ -19,6 +19,8 @@ export class BlogComponent implements OnInit {
     // this.contentfulService.logContent('5qCY28J8NjC0XVIE4UU9HN');
     this.blogPosts$ = this.contentfulService.getEntries('blogPost');
     this.blogPost$ = this.contentfulService.getContent('5qCY28J8NjC0XVIE4UU9HN');
+
+    console.log(this.blogPosts$[0]);
   }
 
 }

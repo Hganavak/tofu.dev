@@ -50,7 +50,7 @@ header {
         border: solid 1px $tofu-primary;
         text-align: center;
 
-        grid-template-rows: 45% 10% 5% 10% 20% 10%;
+        grid-template-rows: 45% 12.5% 5% 7.5% 15% 15%;
         box-shadow: 5px 15px 35px $tofu-primary;
 
         &>* {
@@ -63,6 +63,7 @@ header {
 
         .created {
             align-self: start;
+            font-size: smaller;
             color: $tofu-primary;
         }
 
@@ -72,7 +73,6 @@ header {
 
         // Everything in the card except the image
         :not(:first-child) {
-            // padding: 0 5%;
             margin: 0 5%;
         }
 
