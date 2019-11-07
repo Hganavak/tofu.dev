@@ -33,7 +33,7 @@ export class ContentfulService {
 
   // Get all entries of type
   getEntries(contentType: string) {
-    return from(this.client.getEntries({ 'content_type': contentType })).pipe(
+    return from(this.client.getEntries({ 'content_type': contentType, 'order': '-sys.createdAt' })).pipe(
       map(entries => entries.items.map(entry => entry.fields)),
       tap(x => console.log(x))
     );

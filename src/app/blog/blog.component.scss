@@ -18,6 +18,8 @@ header {
         background-repeat: no-repeat;
         background-size: contain;
         min-height: 150px;
+        margin-top: 50px;
+        @include size(large) { margin-top: 0px; }
     }
 
     #subtitle {
@@ -35,7 +37,7 @@ header {
     justify-content: space-between;
     align-items: stretch;
 
-    grid-template-columns: repeat(auto-fit, minmax(349px, 350px));
+    grid-template-columns: repeat(auto-fit, minmax(249px, 350px));
     grid-auto-rows: 580px;
     grid-row-gap: 3rem;
 
