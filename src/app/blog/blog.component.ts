@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from '../contentful.service';
 import { Observable } from 'rxjs';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { switchMap, tap } from 'rxjs/operators';
+
 // import { MdToHtmlPipe } from '../md-to-html.pipe';
 
 @Component({
@@ -13,7 +16,11 @@ export class BlogComponent implements OnInit {
   blogPost$: Observable<any>;
   blogPosts$: Observable<any>;
 
-  constructor(private contentfulService: ContentfulService) { }
+  constructor(
+    private contentfulService: ContentfulService,
+    private route: ActivatedRoute,
+    private router: Router,
+    ) { }
 
   ngOnInit() {
     // this.contentfulService.logContent('5qCY28J8NjC0XVIE4UU9HN');
@@ -21,6 +28,14 @@ export class BlogComponent implements OnInit {
     this.blogPost$ = this.contentfulService.getContent('5qCY28J8NjC0XVIE4UU9HN');
 
     console.log(this.blogPosts$[0]);
+
+
+    // Get route info
+    this.route.paramMap.pipe(
+      tap(x => console.log(x))
+    // switchMap((params: ParamMap) =>
+      // this.service.getHero(params.get('id')))
+    );
   }
 
 }

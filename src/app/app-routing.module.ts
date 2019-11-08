@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'about', component: AboutComponent },
   { path: 'blog', component: BlogComponent },
+  { path: 'blog/:id', component: BlogComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', redirectTo: 'home' }
 ];
