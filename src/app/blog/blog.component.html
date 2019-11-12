@@ -24,7 +24,7 @@
 
       <h5 class="summary">{{ blogPost.summary }}</h5>
  
-      <form action="">
+      <form [routerLink]="['/blog', blogPost.slug ]">
         <input class="cta" type="submit" value="Read" />
       </form>
 
