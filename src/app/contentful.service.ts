@@ -10,7 +10,6 @@ import { markViewDirty } from '@angular/core/src/render3/instructions';
 })
 export class ContentfulService {
 
-
   // Initialize Contentful client
   private client = contentful.createClient({
     space: environment.contentful.spaceId,
@@ -38,5 +37,18 @@ export class ContentfulService {
       tap(x => console.log(x))
     );
   }
+
+  // Get blog post by its slug
+  getBlogPostBySlug(slug) {
+    return from(this.client.getEntries({
+      'content_type': 'blogPost',
+      'fields.slug[in]': slug,
+      })).pipe(
+        map(entries => entries.items[0].fields),
+        tap(x => console.log(x))
+    );
+  }
+
+
 
 }

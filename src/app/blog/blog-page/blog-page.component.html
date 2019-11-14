@@ -1,1 +1,11 @@
-<h1>Loading Blog Post: {{ this.blogPostSlug }} </h1>
+<section id="blog-items-container" *ngIf="blogPost$ | async as blogPost">
+    <h2 class="title">{{ blogPost.title }}</h2>
+    <div class="created">{{ blogPost.created }} </div>
+    <div id="tags">
+    <strong>Tags:&nbsp;</strong>
+    <span *ngFor="let tag of blogPost.tags" style="border: 1px solid #88cdff; border-radius: 3px; padding: 2px 7px; margin: 0 3px;"> {{ tag }} </span>
+    </div>
+    <h5 class="summary"><strong>Summary:</strong>&nbsp;{{ blogPost.summary }}</h5>
+    <hr />
+    <div innerHtml="{{ blogPost.body | mdToHtml }}"></div>
+</section>

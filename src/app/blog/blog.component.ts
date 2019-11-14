@@ -16,6 +16,8 @@ export class BlogComponent implements OnInit {
   blogPost$: Observable<any>;
   blogPosts$: Observable<any>;
 
+  indBlogPost$: Observable<any>;
+
   constructor(
     private contentfulService: ContentfulService,
     private route: ActivatedRoute,
@@ -26,8 +28,10 @@ export class BlogComponent implements OnInit {
     // this.contentfulService.logContent('5qCY28J8NjC0XVIE4UU9HN');
     this.blogPosts$ = this.contentfulService.getEntries('blogPost');
     this.blogPost$ = this.contentfulService.getContent('5qCY28J8NjC0XVIE4UU9HN');
+    this.indBlogPost$ = this.contentfulService.getBlogPostBySlug('5qCY28J8NjC0XVIE4UU9HN');
 
-    console.log(this.blogPosts$[0]);
+
+    // console.log(this.blogPosts$[0]);
 
 
     // Get route info
