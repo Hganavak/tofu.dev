@@ -1,0 +1,54 @@
+@import '../../../styles.scss';
+
+section {
+    margin: 0 5%;
+}
+
+#blog-item-container {
+    display: grid;
+
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+
+    grid-template-areas:
+        "blog-item-banner"
+        "ribbon"
+        "summary"
+        "body";
+
+    hr {
+        border-top: 1px solid $tofu-primary;
+    }
+
+    #blog-item-banner {
+        grid-area: blog-item-banner;
+        min-height: 100px;
+
+        background-image: url(../../../assets/images/header-blog-item-title.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    #blog-ribbon {
+        text-align: center;
+        grid-area: ribbon;
+        margin: 35px 0 35px 0;
+        padding: 25px;
+        background-color: $tofu-primary;
+        color: $tofu-secondary;
+    }
+
+    #blog-summary {
+        grid-area: summary;
+        text-align: center;
+    }
+
+    #blog-body {
+        grid-area: body;
+        min-height: 50vh;
+    }
+
+
+    
+}

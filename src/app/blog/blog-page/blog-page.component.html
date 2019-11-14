@@ -1,11 +1,24 @@
-<section id="blog-items-container" *ngIf="blogPost$ | async as blogPost">
-    <h2 class="title">{{ blogPost.title }}</h2>
-    <div class="created">{{ blogPost.created }} </div>
-    <div id="tags">
-    <strong>Tags:&nbsp;</strong>
-    <span *ngFor="let tag of blogPost.tags" style="border: 1px solid #88cdff; border-radius: 3px; padding: 2px 7px; margin: 0 3px;"> {{ tag }} </span>
-    </div>
-    <h5 class="summary"><strong>Summary:</strong>&nbsp;{{ blogPost.summary }}</h5>
-    <hr />
-    <div innerHtml="{{ blogPost.body | mdToHtml }}"></div>
-</section>
+<div id="blog-item-container" *ngIf="blogPost$ | async as blogPost">
+
+    <section id="blog-item-banner"></section>
+
+    <section id="blog-ribbon">
+        <h1 class="title">{{ blogPost.title }}</h1>
+        <h5 class="created">{{ blogPost.created }}</h5>
+        <div id="tags" style="margin: 15px;">
+            <strong>Tags: &nbsp;</strong>
+            <span *ngFor="let tag of blogPost.tags" style="border: 1px solid #fff; background-color: #fff; color: #000; border-radius: 3px; padding: 3px 7px; margin: 0 3px;"> {{ tag }} </span>
+        </div>
+    </section>
+
+    <section id="blog-summary">
+        <strong>Summary:</strong>&nbsp;{{ blogPost.summary }}
+    </section>
+
+    <section id="blog-body">
+        <hr width="65%;" style="margin-top: 35px;"/>
+
+        <div innerHtml="{{ blogPost.body | mdToHtml }}"></div>
+    </section>
+
+</div>
