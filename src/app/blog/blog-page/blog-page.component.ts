@@ -12,7 +12,7 @@ import { ContentfulService } from '../../contentful.service';
 export class BlogPageComponent implements OnInit {
 
   private blogPostSlug: string;
-  private blogPost$: Observable<any>;
+  public blogPost$: Observable<any>;
 
   constructor(
     private route: ActivatedRoute,
