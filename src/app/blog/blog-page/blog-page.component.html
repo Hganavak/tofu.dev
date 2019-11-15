@@ -12,12 +12,11 @@
     </section>
 
     <section id="blog-summary">
-        <strong>Summary:</strong>&nbsp;{{ blogPost.summary }}
+        <div id="blog-summary-text"><h3>Summary: {{ blogPost.summary }}</h3></div>
+        <div><img id="blog-item-image" src="{{ blogPost.image.fields.file.url }}" /></div>
     </section>
 
     <section id="blog-body">
-        <hr width="65%;" style="margin-top: 35px;"/>
-
         <div innerHtml="{{ blogPost.body | mdToHtml }}"></div>
     </section>
 

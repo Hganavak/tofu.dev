@@ -1,7 +1,7 @@
 @import '../../../styles.scss';
 
 section {
-    margin: 0 5%;
+    margin: 0 10%;
 }
 
 #blog-item-container {
@@ -22,7 +22,7 @@ section {
 
     #blog-item-banner {
         grid-area: blog-item-banner;
-        min-height: 100px;
+        min-height: 175px;
 
         background-image: url(../../../assets/images/header-blog-item-title.svg);
         background-repeat: no-repeat;
@@ -42,6 +42,22 @@ section {
     #blog-summary {
         grid-area: summary;
         text-align: center;
+        display: grid;
+        grid-template-columns: 60% 40%;
+
+        align-items: center;
+
+        margin: 50px auto 50px auto;
+
+
+
+        #blog-item-image {
+            width: 350px;
+            height: 350px;
+            border: 1px solid $tofu-primary;
+            box-shadow: 5px 10px 95px $tofu-primary;
+            border-radius: 5%;
+        }
     }
 
     #blog-body {
