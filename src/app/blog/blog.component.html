@@ -13,13 +13,13 @@
         <img src="{{ blogPost.image.fields.file.url }}" style="width: 100%; height: 100%"  width="100%" />
       </div>
 
-      <h2 class="title">{{ blogPost.title }}</h2>
+      <h4 class="title">{{ blogPost.title }}</h4>
 
       <div class="created">{{ blogPost.created }} </div>
 
-      <div id="tags">
+      <div class="tags">
         <strong>Tags:&nbsp;</strong>
-        <span *ngFor="let tag of blogPost.tags" style="border: 1px solid #88cdff; border-radius: 3px; padding: 2px 7px; margin: 0 3px;"> {{ tag }} </span>
+        <span *ngFor="let tag of blogPost.tags" class="tag"> {{ tag }} </span>
       </div>
 
       <h5 class="summary">{{ blogPost.summary }}</h5>

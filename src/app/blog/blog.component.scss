@@ -48,7 +48,7 @@ header {
     align-items: stretch;
 
     grid-template-columns: repeat(auto-fit, minmax(249px, 400px));
-    grid-auto-rows: 580px;
+    grid-auto-rows: 680px;
     grid-row-gap: 3rem;
 
     padding-bottom: 5%;
@@ -62,10 +62,7 @@ header {
         border: solid 1px $tofu-primary;
         text-align: center;
 
-        grid-template-rows: 45% 15% 5% 7.5% 15% 12.5%;
-        @include size(medium) {
-            grid-template-rows: 45% 12.5% 5% 7.5% 15% 15%;
-        }
+        grid-template-rows: 35% 12.5% 5% 10% 25% 12.5%;
 
         box-shadow: 5px 15px 35px $tofu-primary;
 
@@ -75,6 +72,19 @@ header {
 
         .title {
             align-self: start;
+            @include size(medium){
+                line-height: 1.55em;
+            }
+        }
+
+        .tags {
+            align-self: center;
+            .tag {
+                border: 1px solid #88cdff;
+                border-radius: 5px;
+                padding: 3px 9px;
+                margin: 53px 3px;
+            }
         }
 
         .created {
@@ -84,7 +94,7 @@ header {
         }
 
         .summary {
-            // align-self: center;
+            line-height: 1.85em;
         }
 
         // Everything in the card except the image

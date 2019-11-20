@@ -4,7 +4,7 @@
 
     <section id="blog-ribbon">
         <h1 id="title">{{ blogPost.title }}</h1>
-        <h5 class="created">{{ blogPost.created }}</h5>
+        <h6 class="created">{{ blogPost.created }}</h6>
         <div id="tags" style="margin: 15px;">
             <strong>Tags: &nbsp;</strong>
             <span *ngFor="let tag of blogPost.tags" style="border: 1px solid #fff; background-color: #fff; color: #000; border-radius: 3px; padding: 3px 7px; margin: 0 8px;"> {{ tag }} </span>
@@ -14,7 +14,7 @@
     <section id="blog-summary">
         <div id="blog-summary-text">
             <h2>Summary</h2>
-             <p>{{ blogPost.summary }}</p>
+             <h4>{{ blogPost.summary }}</h4>
         </div>
         <div id="blog-summary-img">
             <img id="blog-item-image" src="{{ blogPost.image.fields.file.url }}" />
