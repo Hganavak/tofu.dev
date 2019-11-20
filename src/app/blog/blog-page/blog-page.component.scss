@@ -28,6 +28,7 @@ section {
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+        cursor: pointer;
     }
 
     #blog-ribbon {
@@ -47,6 +48,14 @@ section {
             margin: auto auto;
         }
 
+        .tag {
+            border: 1px solid #fff;
+            background-color: #fff;
+            color: #000;
+            border-radius: 5px;
+            padding: 3px 12px;
+            margin: 0 8px;
+        }
 
     }
 
@@ -78,7 +87,6 @@ section {
         line-height: 2em;
         letter-spacing: 0.75px;
         max-width: 100%;
-
 
         background-image: url(../../../assets/images/header-banner-footer.svg);
         background-repeat: no-repeat;

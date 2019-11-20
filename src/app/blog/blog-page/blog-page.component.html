@@ -1,13 +1,13 @@
 <div id="blog-item-container" *ngIf="blogPost$ | async as blogPost">
 
-    <section id="blog-item-banner"></section>
+    <section id="blog-item-banner" [routerLink]="['/blog']"></section>
 
     <section id="blog-ribbon">
         <h1 id="title">{{ blogPost.title }}</h1>
-        <h6 class="created">{{ blogPost.created }}</h6>
+        <h5 class="created">{{ blogPost.created }}</h5>
         <div id="tags" style="margin: 15px;">
             <strong>Tags: &nbsp;</strong>
-            <span *ngFor="let tag of blogPost.tags" style="border: 1px solid #fff; background-color: #fff; color: #000; border-radius: 3px; padding: 3px 7px; margin: 0 8px;"> {{ tag }} </span>
+            <span *ngFor="let tag of blogPost.tags" class="tag"> {{ tag }} </span>
         </div>
     </section>
 
@@ -23,6 +23,11 @@
 
     <section id="blog-body">
         <div innerHtml="{{ blogPost.body | mdToHtml }}"></div>
+        <div style="float: right;">
+            <form [routerLink]="['/blog']">
+                <input class="cta cta-secondary" type="submit" value="View All Posts" style="margin: 0 10px 0 10px"/>
+            </form>
+        </div>
     </section>
 
 </div>
