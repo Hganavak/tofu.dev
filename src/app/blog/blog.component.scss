@@ -63,7 +63,7 @@ header {
         border: solid 1px $tofu-primary;
         text-align: center;
 
-        grid-template-rows: 35% 12.5% 5% 10% 25% 12.5%;
+        grid-template-rows: 35% 12.5% 5% 12.5% 22.5% 12.5%;
 
         box-shadow: 5px 15px 35px $tofu-primary;
 
@@ -81,10 +81,12 @@ header {
         .tags {
             align-self: center;
             .tag {
-                border: 1px solid #88cdff;
+                display: inline-block;
+                border: 1px solid $tofu-primary;
+                color: $tofu-third;
                 border-radius: 5px;
                 padding: 3px 9px;
-                margin: 53px 3px;
+                margin: 3px 3px;
             }
         }
 
