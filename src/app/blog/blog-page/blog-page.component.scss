@@ -42,20 +42,32 @@ section {
         min-height: 275px;
 
         #title {
-            line-height: 2em;
-            letter-spacing: 0.35em;
-            width: 75%;
+            font-size: 16pt;
+            line-height: 1.5em;
             margin: auto auto;
+
+            @include size(medium) {
+                font-size: 24pt;
+                line-height: 2em;
+                letter-spacing: 0.35em;
+                width: 75%;
+            }
+
         }
 
-        .tag {
-            border: 1px solid #fff;
-            background-color: #fff;
-            color: #000;
-            border-radius: 5px;
-            padding: 3px 12px;
-            margin: 0 8px;
+        #tags {
+            .tag {
+                display: inline-block;
+                border: 1px solid $tofu-secondary;
+                background-color: $tofu-secondary;
+                color: $tofu-third;
+                border-radius: 5px;
+                padding: 3px 12px;
+                margin: 3px 8px;
+            }
+
         }
+
 
     }
 
@@ -68,7 +80,7 @@ section {
         }
 
         @include size(large) {
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 70% 30%;
         }
 
         justify-items: center;
@@ -78,11 +90,13 @@ section {
             line-height: 2em;
             letter-spacing: 0.75px;
             text-align: center;
+            
+            padding: 0 0 10% 0;
+            @include size(medium) { padding: 0 10% 10% 10%; }
         }
 
         #blog-item-image {
-            width: 350px;
-            height: 350px;
+            width: 100%;
             border: 1px solid $tofu-primary;
             box-shadow: 5px 10px 95px $tofu-primary;
             border-radius: 5%;
