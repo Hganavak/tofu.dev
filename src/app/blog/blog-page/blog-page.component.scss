@@ -90,7 +90,7 @@ section {
 
         background-image: url(../../../assets/images/header-banner-footer.svg);
         background-repeat: no-repeat;
-        background-position-x: 5%;
+        background-position-x: 7%;
 
         background-size: cover;
         padding: 0 10% 250px 10%;
@@ -103,6 +103,10 @@ section {
 
 // Markdown code blocks
 :host ::ng-deep {
+
+    code {
+        color: $tofu-primary;
+    }
 
     pre {
         margin: 35px 0;
@@ -129,5 +133,9 @@ section {
           }
         // End scrollbar styling
         
+        code {
+            color: $tofu-third;
+        }
+
     }
 }

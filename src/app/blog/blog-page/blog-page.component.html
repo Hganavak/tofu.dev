@@ -4,7 +4,7 @@
 
     <section id="blog-ribbon">
         <h1 id="title">{{ blogPost.title }}</h1>
-        <h5 class="created">{{ blogPost.created }}</h5>
+        <h4 class="created">{{ blogPost.created | date: 'fullDate' }}</h4>
         <div id="tags" style="margin: 15px;">
             <strong>Tags: &nbsp;</strong>
             <span *ngFor="let tag of blogPost.tags" class="tag"> {{ tag }} </span>
@@ -23,7 +23,7 @@
 
     <section id="blog-body">
         <div innerHtml="{{ blogPost.body | mdToHtml }}"></div>
-        <div style="float: right;">
+        <div style="float: right; margin-bottom: 15vh">
             <form [routerLink]="['/blog']">
                 <input class="cta cta-secondary" type="submit" value="View All Posts" style="margin: 0 10px 0 10px"/>
             </form>

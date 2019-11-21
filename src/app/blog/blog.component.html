@@ -15,7 +15,7 @@
 
       <h4 class="title">{{ blogPost.title }}</h4>
 
-      <div class="created">{{ blogPost.created }} </div>
+      <div class="created">{{ blogPost.created | date: 'fullDate' }} </div>
 
       <div class="tags">
         <strong>Tags:&nbsp;</strong>

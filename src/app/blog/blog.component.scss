@@ -43,6 +43,7 @@ header {
 
     @include size(large) {
         justify-content: space-between;
+
     }
 
     align-items: stretch;
@@ -89,7 +90,7 @@ header {
 
         .created {
             align-self: start;
-            font-size: smaller;
+            font-size: 13pt;
             color: $tofu-primary;
         }
 
