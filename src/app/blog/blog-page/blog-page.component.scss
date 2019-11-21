@@ -62,7 +62,15 @@ section {
     #blog-summary {
         grid-area: summary;
         display: grid;
-        grid-template-columns: 50% 50%;
+
+        @include size(medium) {
+            grid-template-columns: 40% 60%;
+        }
+
+        @include size(large) {
+            grid-template-columns: 50% 50%;
+        }
+
         justify-items: center;
         padding: 30px 0 30px 0;
 
