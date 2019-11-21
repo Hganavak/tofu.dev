@@ -12,7 +12,7 @@
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 header {
@@ -150,16 +150,109 @@ header {
 }
 
 #blog {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: 20% 65% 15%;
+    text-align: center;
     align-items: center;
 
     font-variant: small-caps;
     letter-spacing: 0.1em;
 
-    text-align: center;
-    padding: 0 5% 0 5%;
+    #blog-items-container {
+        display: grid;
+        height: auto;
+        min-height: auto;
+
+        justify-content: space-around;
+
+        @include size(large) {
+            justify-content: space-around;
+            padding: 0 10%;
+        }
+
+        align-items: stretch;
+
+        grid-template-columns: repeat(auto-fit, minmax(249px, 400px));
+        grid-auto-rows: 620px;
+        grid-row-gap: 3rem;
+
+        padding-bottom: 5%;
+
+        .blog-item-card {
+            display: grid;
+            border-radius: 0 0 3% 3%;
+            border: solid 1px $tofu-primary;
+            text-align: center;
+
+            grid-template-rows: 35% 12.5% 5% 12.5% 22.5% 12.5%;
+
+            box-shadow: 5px 15px 35px $tofu-primary;
+
+            &>* {
+                // border: solid 1px blue;
+            }
+
+            .title {
+                align-self: start;
+                @include size(medium){
+                    line-height: 1.55em;
+                }
+            }
+
+            .tags {
+                align-self: center;
+                .tag {
+                    display: inline-block;
+                    border: 1px solid $tofu-primary;
+                    color: $tofu-third;
+                    border-radius: 5px;
+                    padding: 3px 9px;
+                    margin: 3px 3px;
+                }
+            }
+
+            .created {
+                align-self: start;
+                font-size: 13pt;
+                color: $tofu-primary;
+            }
+
+            .summary {
+                line-height: 1.85em;
+            }
+
+            // Everything in the card except the image
+            :not(:first-child) {
+                margin: 0 5%;
+            }
+
+
+            @include size(large) {
+                // padding: 3rem 3rem;
+                // border-radius: 8%;
+            }
+
+            background-color: $tofu-secondary;
+            color: #000;
+
+            p {
+                line-height: 1.25em;
+                @include size(large) { line-height: 1.5em; }
+                text-align: justify;
+            }
+
+            form {
+                justify-self: end;
+                align-self: start;
+            }
+
+
+        }
+    }
+
+    #view-blog {
+        justify-self: center;
+    }
 
 
 }
