@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
-  private blogPosts$: Observable<any>;
+  public blogPosts$: Observable<any>;
 
   constructor(private contentfulService: ContentfulService) { }
 
