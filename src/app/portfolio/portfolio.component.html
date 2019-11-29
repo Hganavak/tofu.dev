@@ -12,3 +12,11 @@
   </div>
   <div id="banner-img"></div>
 </header>
+
+<section id="portfolio-items-container" *ngIf="portfolioItems$ | async as portfolioItems">
+  <div *ngFor="let portfolioItem of portfolioItems">
+    <h2>{{ portfolioItem.title }}</h2>
+    <h3>{{ portfolioItem.summary }}</h3>
+    <h5>Technologies: {{ portfolioItem.technologies }}</h5>
+  </div>
+</section>
