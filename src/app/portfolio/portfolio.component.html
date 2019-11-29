@@ -1,20 +1,14 @@
-<section class="stub-page">
-  <h1>Portfolio</h1>
-  <h2>Coming Soon...</h2>
-  <p>In the mean time feel free to browse the recent work on my GitHub profile.</p>
-
-  <div class="me-cta">
-      <form action="https://github.com/Hganavak">
-          <input class="cta cta-secondary" type="submit" value="View GitHub" />
-      </form>
+<header class="portfolio-banner">
+  <div id="title">
   </div>
+  <div id="description">
+    <h2 id="name-and-title">Welcome to My Portfolio</h2>
+    <h2>Scroll down for a list of recent projects.</h2>
 
+    <form [routerLink]="['/contact']">
+      <input class="cta cta-secondary" type="submit" value="Get in Contact" style="margin: 0 10px 0 10px"/>
+    </form>
 
-</section>
-
-<section *ngIf="portfolioItems$ | async as portfolioItems">
-  <div class="blog-item-card" *ngFor="let portfolioItem of portfolioItems">
-    <h1>{{ portfolioItem.title }}</h1>
-    <h3>{{ portfolioItem.summary }}</h3>
   </div>
-</section>
+  <div id="banner-img"></div>
+</header>
