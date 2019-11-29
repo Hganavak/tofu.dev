@@ -11,3 +11,10 @@
 
 
 </section>
+
+<section *ngIf="portfolioItems$ | async as portfolioItems">
+  <div class="blog-item-card" *ngFor="let portfolioItem of portfolioItems">
+    <h1>{{ portfolioItem.title }}</h1>
+    <h3>{{ portfolioItem.summary }}</h3>
+  </div>
+</section>
