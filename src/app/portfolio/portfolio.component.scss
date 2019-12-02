@@ -24,6 +24,15 @@ section {
         background-color: $tofu-secondary;
         color: $tofu-third;
     }
+
+    @include size(large) {
+        &:last-of-type {
+            background-image: url(../../assets/images/header-banner-footer.svg); // Disabled banner image
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: 20%;
+        }
+    }
 }
 
 header {
@@ -37,7 +46,8 @@ header {
         // background-image: url(../../assets/images/header-banner-footer.svg); // Disabled banner image
         background-repeat: no-repeat;
         background-size: cover;
-        background-position-x: 8%;
+        background-position-x: 0%;
+
         padding: 3em 5% 0 5%;
         font-size: smaller;
         text-align: center;
