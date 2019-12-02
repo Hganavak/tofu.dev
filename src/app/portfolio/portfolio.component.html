@@ -13,14 +13,6 @@
   <div id="banner-img"></div>
 </header>
 
-<!-- <section id="portfolio-items-container" *ngIf="portfolioItems$ | async as portfolioItems">
-  <div *ngFor="let portfolioItem of portfolioItems">
-    <h2>{{ portfolioItem.title }}</h2>
-    <h3>{{ portfolioItem.summary }}</h3>
-    <h5>Technologies: {{ portfolioItem.technologies }}</h5>
-  </div>
-</section> -->
-
 <section id="portfolio-items-container" *ngIf="portfolioItems$ | async as portfolioItems">
   <section class="portfolio-item" *ngFor="let portfolioItem of portfolioItems">
     <h1 class="item-title">{{ portfolioItem.title }}</h1>
@@ -28,8 +20,8 @@
       <p>{{ portfolioItem.summary }}</p>
       <p><strong>Technologies: </strong>{{ portfolioItem.technologies }}</p>
     </div>
-    <img src="../assets/images/research-hub.png" class="preview-img-picture">
-    <img src="../assets/images/research-hub-mobile.png" class="preview-img-picture mobile">
+    <img src="{{ portfolioItem.image1.fields.file.url }}" class="preview-img-picture">
+    <img src="{{ portfolioItem.image2.fields.file.url }}" class="preview-img-picture mobile">
     <div class="item-cta">
         <form [routerLink]="['/portfolio']">
           <input class="cta cta-secondary" type="submit" value="View Project" />
