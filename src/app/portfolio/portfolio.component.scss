@@ -19,11 +19,17 @@
     &:nth-of-type(odd) {
         background-color: $tofu-primary;
         color: $tofu-secondary;
+        .preview-img-picture {
+            box-shadow: 5px 10px 95px $tofu-secondary;
+        }
     }
 
     &:nth-of-type(even) {
         background-color: $tofu-secondary;
         color: $tofu-third;
+        .preview-img-picture {
+            box-shadow: 5px 10px 95px $tofu-primary;
+        }
     }
 
     @include size(large) {
