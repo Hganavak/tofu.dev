@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class HomeComponent implements OnInit {
 
   public blogPosts$: Observable<any>;
+  public portfolioItems$: Observable<any>;
 
   constructor(private contentfulService: ContentfulService) { }
 

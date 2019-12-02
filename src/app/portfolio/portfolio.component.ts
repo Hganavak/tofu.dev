@@ -11,7 +11,7 @@ import { switchMap, tap } from 'rxjs/operators';
 })
 export class PortfolioComponent implements OnInit {
 
-  portfolioItems$: Observable<any>;
+  public portfolioItems$: Observable<any>;
 
   constructor(
     private contentfulService: ContentfulService,
