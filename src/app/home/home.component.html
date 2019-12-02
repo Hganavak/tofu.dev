@@ -41,8 +41,24 @@
     
   </section>
 
+<section id="portfolio-items-container" *ngIf="portfolioItems$ | async as portfolioItems">
+  <section class="portfolio-item" *ngFor="let portfolioItem of portfolioItems">
+    <h1 class="item-title">{{ portfolioItem.title }}</h1>
+    <div class="item-description">
+      <p>{{ portfolioItem.summary }}</p>
+      <p><strong>Technologies: </strong>{{ portfolioItem.technologies }}</p>
+    </div>
+    <img src="{{ portfolioItem.image1.fields.file.url }}" class="preview-img-picture">
+    <img src="{{ portfolioItem.image2.fields.file.url }}" class="preview-img-picture mobile">
+    <div class="item-cta">
+        <form [routerLink]="['/portfolio']">
+          <input class="cta cta-secondary" type="submit" value="View Project" />
+        </form>
+      </div>
+  </section>
+</section>
   
-  <section class="portfolio-item">
+  <!-- <section class="portfolio-item">
     <h1 class="item-title">ResearchHub</h1>
     <div class="item-description">
       <p>The ResearchHub connects users with people, resources, and services from across the University of Auckland to accelerate research.</p>
@@ -71,7 +87,7 @@
             <input class="cta cta-secondary" type="submit" value="View Project" />
         </form>
       </div>
-  </section>
+  </section> -->
 
   <section id="blog">
     <div id="blog-description">

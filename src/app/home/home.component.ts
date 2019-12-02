@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.blogPosts$ = this.contentfulService.getEntries('blogPost', 3);
+    this.portfolioItems$ = this.contentfulService.getEntries('portfolioItem');
   }
 
 }

@@ -352,11 +352,11 @@ header {
          grid-area: item-cta;
      }
 
-    &:nth-of-type(even) {
+    &:nth-of-type(odd) {
         background-color: $tofu-secondary;
     }
 
-    &:nth-of-type(odd) {
+    &:nth-of-type(even) {
         background-color: $tofu-primary;
         color: $tofu-secondary;
 
