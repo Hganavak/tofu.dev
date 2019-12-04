@@ -12,23 +12,26 @@
         </div>
     </section>
 
-    <section id="work-intro-container">
-        <img src="{{ portfolioItem.imageImac.fields.file.url }}" id="work-intro-computer">
-        <div id="work-description">
-          <h1 id="work-description-title">Summary</h1>
-          <p>{{ portfolioItem.workDescription }}</p>
-          </div>
-    </section>
+    <div id="portfolio-item-body">
+        <section id="work-intro-container">
+            <img src="{{ portfolioItem.imageImac.fields.file.url }}" id="work-intro-computer">
+            <div id="work-description">
+            <h1 id="work-description-title">Summary</h1>
+            <p>{{ portfolioItem.workDescription }}</p>
+            </div>
+        </section>
 
-    <section id="technologies">
-      <div id="technology-description">
-        <h1>Technologies</h1>
-        <p>{{ portfolioItem.technologies }}</p>
-      </div>
-      <div id="technology-mobile-image">
-        <img src="{{ portfolioItem.imageIphone.fields.file.url }}" style="height: 100%;">
-      </div>
-    </section>
+        <section id="technologies">
+        <div id="technology-description">
+            <h1>Technologies</h1>
+            <p>{{ portfolioItem.technologies }}</p>
+        </div>
+        <div id="technology-mobile-image">
+            <img src="{{ portfolioItem.imageIphone.fields.file.url }}" style="height: 100%;">
+        </div>
+        </section>
+    </div>
+
 
 
 </div>

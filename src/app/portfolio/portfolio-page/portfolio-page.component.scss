@@ -6,9 +6,6 @@
     grid-template-rows: auto;
     grid-template-columns: 100%; 
 
-    // We use a darker background on this page to contrast the info boxes
-    background-color: #fafafa;
-
 
     #blog-item-banner {
         min-height: 100px;
@@ -24,11 +21,16 @@
     #portfolio-ribbon {
         display: grid;
         text-align: center;
-        margin: 35px 0 35px 0;
+        margin: 35px 0 0px 0;
         padding: 25px;
         background-color: $tofu-primary;
         color: $tofu-secondary;
         min-height: 275px;
+    }
+
+    // We use a darker background on this page to contrast the info boxes
+    #portfolio-item-body {
+        background-color: #fafafa;
     }
 
     #work-intro-container {
