@@ -1,5 +1,5 @@
 <div id="portfolio-item-container" *ngIf="portfolioItem$ | async as portfolioItem">
-    <section id="blog-item-banner" [routerLink]="['/blog']"></section>
+    <section id="blog-item-banner" [routerLink]="['/portfolio']"></section>
 
     <section id="portfolio-ribbon">
         <h1 id="title">{{ portfolioItem.title }}</h1>
@@ -7,6 +7,8 @@
         <div id="ctas">
             <form [routerLink]="['/blog']">
                 <input class="cta cta-secondary" type="submit" value="View Code" style="margin: 0 10px 0 10px"/>
+            </form>
+            <form action="{{ portfolioItem.url }}">
                 <input class="cta cta-secondary" type="submit" value="View Website" style="margin: 0 10px 0 10px"/>
             </form>
         </div>
