@@ -6,8 +6,13 @@
     grid-template-rows: auto;
     grid-template-columns: 100%; 
 
+    // We use a darker background on this page to contrast the info boxes
+    background-color: #fafafa;
+
+
     #blog-item-banner {
         min-height: 100px;
+        background-color: $tofu-secondary;
 
         background-image: url(../../../assets/images/header-portfolio-item-title.svg);
         background-repeat: no-repeat;
@@ -29,11 +34,11 @@
     #work-intro-container {
         border: 1px solid $tofu-primary;
         border-radius: 3%;
-        background-color: white;
+        background-color: $tofu-secondary;
         display: grid;
-        grid-template-rows: 70% 30%;
-        min-height: 30vh;
+        grid-template-rows: 60% 40%;
         margin: 275px 15% 275px 15%;
+        padding: 2%;
 
         #work-intro-computer {
             height: 500px; margin: -275px auto 0 auto;    
@@ -41,6 +46,13 @@
 
         #work-description {
             text-align: center;
+            font-family: $impact-font;
+            line-height: 2.0em;
+            font-variant: small-caps;
+            letter-spacing: 0.1em;
+            padding: 0 5%;
+
+            align-self: bottom;
 
             #work-description-title {
                 margin-top: 0;
