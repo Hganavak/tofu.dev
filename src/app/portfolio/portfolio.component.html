@@ -23,7 +23,7 @@
     <img src="{{ portfolioItem.image1.fields.file.url }}" class="preview-img-picture">
     <img src="{{ portfolioItem.image2.fields.file.url }}" class="preview-img-picture mobile">
     <div class="item-cta">
-        <form [routerLink]="['/portfolio']">
+        <form [routerLink]="['/portfolio', portfolioItem.slug]">
           <input class="cta cta-secondary" type="submit" value="View Project" />
         </form>
       </div>
