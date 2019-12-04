@@ -1,0 +1,51 @@
+@import '../../../styles.scss';
+
+#portfolio-item-container {
+    display: grid;
+
+    grid-template-rows: auto;
+    grid-template-columns: 100%; 
+
+    #blog-item-banner {
+        min-height: 100px;
+
+        background-image: url(../../../assets/images/header-portfolio-item-title.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        cursor: pointer;
+    }
+
+    #portfolio-ribbon {
+        display: grid;
+        text-align: center;
+        margin: 35px 0 35px 0;
+        padding: 25px;
+        background-color: $tofu-primary;
+        color: $tofu-secondary;
+        min-height: 275px;
+    }
+
+    #work-intro-container {
+        border: 1px solid $tofu-primary;
+        border-radius: 3%;
+        background-color: white;
+        display: grid;
+        grid-template-rows: 70% 30%;
+        min-height: 30vh;
+        margin: 275px 15% 275px 15%;
+
+        #work-intro-computer {
+            height: 500px; margin: -275px auto 0 auto;    
+        }
+
+        #work-description {
+            text-align: center;
+
+            #work-description-title {
+                margin-top: 0;
+            }
+        }
+    }
+
+}

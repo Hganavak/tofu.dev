@@ -1,3 +1,24 @@
-<p>
-  portfolio-page works!
-</p>
+<div id="portfolio-item-container" *ngIf="portfolioItem$ | async as portfolioItem">
+    <section id="blog-item-banner" [routerLink]="['/blog']"></section>
+
+    <section id="portfolio-ribbon">
+        <h1 id="title">{{ portfolioItem.title }}</h1>
+        <h4 id="sumamry">{{ portfolioItem.summary }}</h4>
+        <div id="ctas">
+            <form [routerLink]="['/blog']">
+                <input class="cta cta-secondary" type="submit" value="View Code" style="margin: 0 10px 0 10px"/>
+                <input class="cta cta-secondary" type="submit" value="View Website" style="margin: 0 10px 0 10px"/>
+            </form>
+        </div>
+    </section>
+
+    <section id="work-intro-container">
+        <img src="{{ portfolioItem.imageImac.fields.file.url }}" id="work-intro-computer">
+        <div id="work-description">
+          <h1 id="work-description-title">Summary</h1>
+          Here I'll discuss some work etc
+        </div>
+    </section>
+
+
+</div>

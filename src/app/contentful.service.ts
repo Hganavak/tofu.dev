@@ -49,6 +49,15 @@ export class ContentfulService {
     );
   }
 
-
+  // Get portfolio item by its slug
+  getPortfolioItemBySlug(slug) {
+    return from(this.client.getEntries({
+      'content_type': 'portfolioItem',
+      'fields.slug[in]': slug,
+      })).pipe(
+        map(entries => entries.items[0].fields),
+        tap(x => console.log(x))
+    );
+  }
 
 }

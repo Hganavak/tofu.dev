@@ -24,7 +24,7 @@ export class PortfolioPageComponent implements OnInit {
       this.portfolioItemSlug = paramMap.get('id')
     );
 
-    // this.portfolioItem$ = this.contentfulService.getPortfolioItemBySlug(this.portfolioItemSlug); // Implement
+    this.portfolioItem$ = this.contentfulService.getPortfolioItemBySlug(this.portfolioItemSlug); // Implement
 
   }
 
