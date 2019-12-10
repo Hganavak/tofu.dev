@@ -40,15 +40,24 @@
             <hr />
         </section>
 
-        <section id="technologies">
-        <div id="technology-description">
-            <h1>Fonts & Colors</h1>
-            <p>{{ portfolioItem.technologies }}</p>
-        </div>
-        <div id="technology-mobile-image">
-            <img src="{{ portfolioItem.imageIphone.fields.file.url }}" style="height: 100%;">
-        </div>
+        <section id="fonts-and-colors">
+            <div id="fonts-and-colors-description">
+                <h1>Fonts & Colors</h1>
+                <p>{{ portfolioItem.technologies }}</p>
+            </div>
+            <div id="technology-mobile-image">
+                <img src="{{ portfolioItem.imageColors.fields.file.url }}" style="height: 100%;">
+            </div>
         </section>
+
+        <section id="prototypes">
+            <h1>Prototypes</h1>
+            <div class="prototype" *ngFor="let prototype of portfolioItem.prototypes">
+                <img src="{{ prototype.fields.file.url }}">
+                <p>{{ prototype.fields.description }}</p>
+            </div>
+        </section>
+
     </div>
 
 

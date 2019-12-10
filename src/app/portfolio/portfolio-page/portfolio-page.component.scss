@@ -96,4 +96,45 @@
         }
     }
 
+    #fonts-and-colors {
+        font-family: $impact-font;
+        line-height: 2.0em;
+        font-variant: small-caps;
+        letter-spacing: 0.1em;
+
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 50vh;
+        justify-items: center;
+
+        margin: 5% 15% 1% 15%;
+    }
+
+    #prototypes {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+
+        h1 {
+            text-align: center;
+        }
+
+        .prototype {
+            text-align: center;
+            padding: 5vh 0;
+
+            img {
+                height: 75vh;
+            }
+
+            p { 
+                font-family: $impact-font;
+                line-height: 2.0em;
+                font-variant: small-caps;
+                letter-spacing: 0.1em;
+                padding-top: 1em;
+            }
+
+        }
+    }
 }
