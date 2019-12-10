@@ -55,12 +55,11 @@
         border-radius: 3%;
         background-color: $tofu-secondary;
         display: grid;
-        grid-template-rows: 60% 40%;
-        margin: 275px 15% 30px 15%;
+        margin: 25vh 5% 30px 5%;
         padding: 2%;
 
         #work-intro-computer {
-            height: 500px; margin: -275px auto 0 auto;    
+            height: 50vh; margin: -25vh auto 0 auto;    
         }
 
         #work-description {
