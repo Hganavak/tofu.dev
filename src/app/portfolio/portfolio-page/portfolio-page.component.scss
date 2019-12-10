@@ -84,4 +84,16 @@
         background-size: cover;
     }
 
+    #design-header {
+        h1 {
+            margin: 6vh 0 6vh 0;
+            text-align: center;
+        }
+
+        hr {
+            border: 0.5px solid $tofu-primary;
+            width: 42%;
+        }
+    }
+
 }
