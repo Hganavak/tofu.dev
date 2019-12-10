@@ -5,7 +5,7 @@
         <h1 id="title">{{ portfolioItem.title }}</h1>
         <h4 id="sumamry">{{ portfolioItem.summary }}</h4>
         <div class="ctas">
-            <form [routerLink]="['/blog']">
+            <form action="{{ portfolioItem.code }}">
                 <input class="cta cta-secondary" type="submit" value="View Code" style="margin: 0 10px 0 10px"/>
             </form>
             <form action="{{ portfolioItem.url }}">
@@ -75,7 +75,7 @@
     </div>
 
     <div class="ctas">
-        <form [routerLink]="['/blog']">
+        <form action="{{ portfolioItem.code }}">
             <input class="cta cta-secondary" type="submit" value="View Code" style="margin: 0 10px 0 10px"/>
         </form>
         <form action="{{ portfolioItem.url }}">
