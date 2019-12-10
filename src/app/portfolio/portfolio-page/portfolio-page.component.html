@@ -35,7 +35,7 @@
 
         <div class="upper-separator"></div>
 
-        <section id="design-header">
+        <section id="section-header">
             <h1>Design</h1>
             <hr />
         </section>
@@ -52,16 +52,25 @@
 
         <section id="prototypes">
             <h1>Prototypes</h1>
-            <div class="prototype" *ngFor="let prototype of portfolioItem.prototypes">
+            <div class="img-with-caption" *ngFor="let prototype of portfolioItem.prototypes">
                 <img src="{{ prototype.fields.file.url }}">
                 <p>{{ prototype.fields.description }}</p>
             </div>
         </section>
 
+
+        <div class="upper-separator"></div>
+
+        <section id="section-header">
+            <h1>Final Product</h1>
+            <hr />
+
+            <div class="img-with-caption" *ngFor="let final of portfolioItem.finalProduct">
+                <img src="{{ final.fields.file.url }}">
+                <p>{{ final.fields.description }}</p>
+            </div>
+
+        </section>
     </div>
-
-
-
-
 
 </div>

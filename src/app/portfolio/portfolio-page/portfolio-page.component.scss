@@ -84,7 +84,7 @@
         background-size: cover;
     }
 
-    #design-header {
+    #section-header {
         h1 {
             margin: 6vh 0 6vh 0;
             text-align: center;
@@ -110,6 +110,23 @@
         margin: 5% 15% 1% 15%;
     }
 
+    .img-with-caption {
+        text-align: center;
+        padding: 5vh 0;
+
+        img {
+            max-width: 75%;
+        }
+
+        p { 
+            font-family: $impact-font;
+            line-height: 2.0em;
+            font-variant: small-caps;
+            letter-spacing: 0.1em;
+            padding-top: 1em;
+        }
+    }
+
     #prototypes {
         display: grid;
         grid-template-rows: auto;
@@ -117,24 +134,6 @@
 
         h1 {
             text-align: center;
-        }
-
-        .prototype {
-            text-align: center;
-            padding: 5vh 0;
-
-            img {
-                height: 75vh;
-            }
-
-            p { 
-                font-family: $impact-font;
-                line-height: 2.0em;
-                font-variant: small-caps;
-                letter-spacing: 0.1em;
-                padding-top: 1em;
-            }
-
         }
     }
 }
