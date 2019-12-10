@@ -30,7 +30,7 @@
 
     // We use a darker background on this page to contrast the info boxes
     #portfolio-item-body {
-        background-color: #fafafa;
+        background-color: $tofu-off-secondary;
     }
 
     #work-intro-container {
@@ -63,8 +63,6 @@
     }
 
     #technologies {
-        // background-color: white;
-
         font-family: $impact-font;
         line-height: 2.0em;
         font-variant: small-caps;
@@ -76,6 +74,14 @@
         justify-items: center;
 
         margin: 5% 15%;
+    }
+
+    .upper-separator {
+        background-color: $tofu-off-secondary;
+        height: 8vh;
+        background-image: url(../../../assets/images/header-banner-topper.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
 }
