@@ -9,6 +9,11 @@
     .ctas {
         text-align: center;
 
+        form {
+            margin-top: 1em;
+            @include size(medium) { margin-top: 0; }
+        }
+
         // Custom styling for the CTAs at the bottom of the page
         &:not(:first-of-type) {
             background-color: $tofu-off-secondary;
@@ -20,6 +25,7 @@
     #blog-item-banner {
         min-height: 100px;
         background-color: $tofu-secondary;
+        margin: auto 5%; 
 
         background-image: url(../../../assets/images/header-portfolio-item-title.svg);
         background-repeat: no-repeat;
@@ -36,6 +42,7 @@
         background-color: $tofu-primary;
         color: $tofu-secondary;
         min-height: 275px;
+        line-height: 1.5em;
     }
 
     // We use a darker background on this page to contrast the info boxes
