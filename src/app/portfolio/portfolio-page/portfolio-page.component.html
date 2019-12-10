@@ -4,7 +4,7 @@
     <section id="portfolio-ribbon">
         <h1 id="title">{{ portfolioItem.title }}</h1>
         <h4 id="sumamry">{{ portfolioItem.summary }}</h4>
-        <div id="ctas">
+        <div class="ctas">
             <form [routerLink]="['/blog']">
                 <input class="cta cta-secondary" type="submit" value="View Code" style="margin: 0 10px 0 10px"/>
             </form>
@@ -64,13 +64,23 @@
         <section id="section-header">
             <h1>Final Product</h1>
             <hr />
+        </section>
 
+        <section id="final-product">
             <div class="img-with-caption" *ngFor="let final of portfolioItem.finalProduct">
                 <img src="{{ final.fields.file.url }}">
                 <p>{{ final.fields.description }}</p>
             </div>
-
         </section>
+    </div>
+
+    <div class="ctas">
+        <form [routerLink]="['/blog']">
+            <input class="cta cta-secondary" type="submit" value="View Code" style="margin: 0 10px 0 10px"/>
+        </form>
+        <form action="{{ portfolioItem.url }}">
+            <input class="cta cta-secondary" type="submit" value="View Website" style="margin: 0 10px 0 10px"/>
+        </form>
     </div>
 
 </div>

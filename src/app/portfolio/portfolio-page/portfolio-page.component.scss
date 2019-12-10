@@ -6,6 +6,16 @@
     grid-template-rows: auto;
     grid-template-columns: 100%; 
 
+    .ctas {
+        text-align: center;
+
+        // Custom styling for the CTAs at the bottom of the page
+        &:not(:first-of-type) {
+            background-color: $tofu-off-secondary;
+            height: 35vh;
+            background-image: linear-gradient($tofu-off-secondary, $tofu-off-secondary, $tofu-off-secondary, $tofu-primary);
+        }
+    }
 
     #blog-item-banner {
         min-height: 100px;
@@ -136,4 +146,5 @@
             text-align: center;
         }
     }
+
 }
