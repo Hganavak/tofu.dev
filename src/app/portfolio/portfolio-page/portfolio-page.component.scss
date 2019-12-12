@@ -155,6 +155,11 @@ h1, h2 {
         font-variant: small-caps;
         letter-spacing: 0.1em;
 
+        margin: 5% 5% 1% 5%;
+        @include size(medium) {
+            margin: 5% 15% 1% 15%;
+        }
+
         p, h1 {
             margin: 5% 5%;
             text-align: center;
@@ -176,7 +181,6 @@ h1, h2 {
 
         justify-items: center;
 
-        // margin: 5% 15% 1% 15%;
     }
 
     .img-with-caption {
