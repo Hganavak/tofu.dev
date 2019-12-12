@@ -66,7 +66,11 @@ h1, h2 {
         border-radius: 3%;
         background-color: $tofu-secondary;
 
+
         margin: calc(#{$work-intro-computer-image-size}/2) 5% 5vh 5%;
+        @include size(medium) {
+            margin: calc(#{$work-intro-computer-image-size}/2) 10% 5vh 10%;
+        }
         padding: 2%;
 
         #work-intro-computer {
