@@ -3,7 +3,7 @@
 
     <section id="portfolio-ribbon">
         <h1 id="title">{{ portfolioItem.title }}</h1>
-        <h4 id="sumamry">{{ portfolioItem.summary }}</h4>
+        <h4 id="summary" innerHtml="{{ portfolioItem.summary | mdToHtml }}"></h4>
         <div class="ctas">
             <form action="{{ portfolioItem.code }}">
                 <input class="cta cta-secondary" type="submit" value="View Code" style="margin: 0 10px 0 10px"/>
@@ -19,14 +19,14 @@
             <img src="{{ portfolioItem.imageImac.fields.file.url }}" id="work-intro-computer">
             <div id="work-description">
             <h1 id="work-description-title">Summary</h1>
-            <p>{{ portfolioItem.workDescription }}</p>
+            <p innerHtml="{{ portfolioItem.workDescription | mdToHtml }}"></p>
             </div>
         </section>
 
         <section id="technologies">
         <div id="technology-description">
             <h1>Technologies</h1>
-            <p>{{ portfolioItem.technologies }}</p>
+            <p innerHtml="{{ portfolioItem.technologies | mdToHtml }}"></p>
         </div>
         <div id="technology-mobile-image">
             <img src="{{ portfolioItem.imageIphone.fields.file.url }}" style="height: 100%;">
@@ -43,7 +43,7 @@
         <section id="fonts-and-colors">
             <div id="fonts-and-colors-description">
                 <h1>Fonts & Colors</h1>
-                <p>{{ portfolioItem.technologies }}</p>
+                <p innerHtml="{{ portfolioItem.technologies | mdToHtml }}"></p>
             </div>
             <div id="technology-mobile-image">
                 <img src="{{ portfolioItem.imageColors.fields.file.url }}" style="height: 100%;">
@@ -54,7 +54,7 @@
             <h1>Prototypes</h1>
             <div class="img-with-caption" *ngFor="let prototype of portfolioItem.prototypes">
                 <img src="{{ prototype.fields.file.url }}">
-                <p>{{ prototype.fields.description }}</p>
+                <p innerHtml="{{ prototype.fields.description | mdToHtml }}"></p>
             </div>
         </section>
 
