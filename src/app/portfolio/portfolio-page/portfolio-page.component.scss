@@ -1,7 +1,7 @@
 @import '../../../styles.scss';
 
 // Font sizes
-h1 {
+h1, h2 {
     font-size: 1.5em;
     @include size(large) { font-size: 2em; }
 }
@@ -57,15 +57,22 @@ h1 {
     }
 
     #work-intro-container {
+        display: grid;
+        grid-template-columns: 100%;
+
+        $work-intro-computer-image-size: 50vh;
+ 
         border: 1px solid $tofu-primary;
         border-radius: 3%;
         background-color: $tofu-secondary;
-        display: grid;
-        margin: 25vh 5% 30px 5%;
+
+        margin: calc(#{$work-intro-computer-image-size}/2) 5% 5vh 5%;
         padding: 2%;
 
         #work-intro-computer {
-            height: 50vh; margin: -25vh auto 0 auto;    
+            height: $work-intro-computer-image-size;
+            margin: calc(-#{$work-intro-computer-image-size}/2) auto 0 auto;    
+            max-width: 100%;
         }
 
         #work-description {
@@ -104,7 +111,7 @@ h1 {
 
         #technology-description {
             p, h1 {
-                margin: 5% 15%;
+                margin: 5% 5%;
                 text-align: center;
                 @include size(medium) {
                     text-align: left;
@@ -169,7 +176,7 @@ h1 {
 
         justify-items: center;
 
-        margin: 5% 15% 1% 15%;
+        // margin: 5% 15% 1% 15%;
     }
 
     .img-with-caption {
@@ -196,6 +203,10 @@ h1 {
 
         h1 {
             text-align: center;
+        }
+
+        p {
+            margin: 1em 5%;
         }
     }
 
