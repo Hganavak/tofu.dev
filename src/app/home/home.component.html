@@ -45,8 +45,8 @@
   <section class="portfolio-item" *ngFor="let portfolioItem of portfolioItems">
     <h1 class="item-title">{{ portfolioItem.title }}</h1>
     <div class="item-description">
-      <p>{{ portfolioItem.summary }}</p>
-      <p><strong>Technologies: </strong>{{ portfolioItem.technologies }}</p>
+      <p innerHtml="{{ portfolioItem.summary | mdToHtml }}"></p>
+      <p innerHtml="{{ portfolioItem.workDescription | mdToHtml }}"></p>
     </div>
     <img src="{{ portfolioItem.image1.fields.file.url }}" class="preview-img-picture">
     <img src="{{ portfolioItem.image2.fields.file.url }}" class="preview-img-picture mobile">
