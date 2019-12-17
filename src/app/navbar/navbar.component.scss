@@ -60,10 +60,8 @@
         display: block;
 
         border-bottom: none;
-        // background-color: $tofu-secondary;
         background-color:  $tofu-secondary-transparent;
-        // padding: 1em 5% 0 0;
-        padding: 0 0 1vh 0;
+        padding: 0 1em 1vh 0;
         letter-spacing: 0.35em;
 
         @include size(large) {
