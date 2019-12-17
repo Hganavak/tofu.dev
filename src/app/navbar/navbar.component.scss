@@ -54,6 +54,9 @@
 @include size (medium) {
 
     .topnav {
+        box-shadow: 5px 5px 35px $tofu-secondary;
+        box-shadow: 5px 5px 25px $tofu-secondary;
+
         position: fixed;
         top: 0;
         width: 100%;
