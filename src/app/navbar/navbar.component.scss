@@ -1,20 +1,22 @@
 @import '../../styles.scss';
 
-$navbar-mobile-height: 5vh;
-$navbar-height: 10vh;
-
 .activeLink {
     background-color: $tofu-secondary;
     color: $tofu-primary !important;
 
     @include size(medium) {
+        background-color: transparent;
         border-bottom: 1px solid $tofu-primary;
-        padding-bottom: 10px;
+        padding-bottom: calc(#{$navbar-height}/2);
     }
 }
 
 
 .topnav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
     background-color: $tofu-primary;
     border-bottom: 1px solid $tofu-primary;
     font-variant: small-caps;
@@ -52,9 +54,16 @@ $navbar-height: 10vh;
 @include size (medium) {
 
     .topnav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: block;
+
         border-bottom: none;
-        background-color: $tofu-secondary;
-        padding: 1em 5% 0 0;
+        // background-color: $tofu-secondary;
+        background-color:  $tofu-secondary-transparent;
+        // padding: 1em 5% 0 0;
+        padding: 0 0 1vh 0;
         letter-spacing: 0.35em;
 
         @include size(large) {
@@ -84,7 +93,7 @@ $navbar-height: 10vh;
         } 
 
         .navbar-sep:after {
-            color: $tofu-third;
+            color: $tofu-primary;
             content: " | ";
         }
 

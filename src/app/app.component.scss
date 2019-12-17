@@ -1,0 +1,9 @@
+@import '../styles.scss';
+
+.main {
+    margin-top: calc(#{$navbar-mobile-height}*2);
+
+    @include size(medium) {
+        margin-top: calc(#{$navbar-height}*2);
+    }
+}

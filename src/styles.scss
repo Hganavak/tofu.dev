@@ -7,9 +7,15 @@ $tofu-secondary: white;
 $tofu-third: #2F2E41;
 $tofu-off-secondary: #FAFAFA;
 
+$tofu-secondary-transparent: rgba(255, 255, 255, 0.90); 
+
 // Fonts
 $impact-font: 'Michroma', sans-serif;
 $base-font-color: #2b2b2b;
+
+// Heights
+$navbar-height: 5vh;
+$navbar-mobile-height: 5vh;
 
 html {
     font-family: 'Roboto', sans-serif;
