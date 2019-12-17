@@ -3,14 +3,25 @@
 $navbar-mobile-height: 5vh;
 $navbar-height: 10vh;
 
+.activeLink {
+    background-color: $tofu-secondary;
+    color: $tofu-primary !important;
+
+    @include size(medium) {
+        border-bottom: 1px solid $tofu-primary;
+        padding-bottom: 10px;
+    }
+}
+
+
 .topnav {
     background-color: $tofu-primary;
+    border-bottom: 1px solid $tofu-primary;
     font-variant: small-caps;
 
     letter-spacing: 0.25em;
     min-height: $navbar-mobile-height;
     
-
     a {
         display: block;
         color: $tofu-secondary;
@@ -18,11 +29,6 @@ $navbar-height: 10vh;
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
-
-        &:hover, &:active {
-            background-color: $tofu-secondary;
-            color: $tofu-primary;
-        }
 
         // Hide everything except the hamburger icon on mobile
         &:not(:first-child) {
@@ -46,6 +52,7 @@ $navbar-height: 10vh;
 @include size (medium) {
 
     .topnav {
+        border-bottom: none;
         background-color: $tofu-secondary;
         padding: 1em 5% 0 0;
         letter-spacing: 0.35em;
@@ -74,11 +81,13 @@ $navbar-height: 10vh;
                 padding-bottom: 10px;
             }
 
-            // Add a | after all links except the last
-            &:not(:last-of-type):after {
-                content: " | ";
-            }
         } 
+
+        .navbar-sep:after {
+            color: $tofu-third;
+            content: " | ";
+        }
+
     }
 
     // Align the navigation items to the right

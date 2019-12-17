@@ -3,10 +3,14 @@
     <a href="javascript:void(0);" class="icon" (click)="toggleNavBar()">
       <i class="fa fa-bars"></i>
     </a>
-    <a [routerLink]="['/']" class="active" (click)="toggleNavBar()">Home</a> 
-    <a [routerLink]="['/portfolio']" (click)="toggleNavBar()">Portfolio</a> 
-    <a [routerLink]="['/about']" (click)="toggleNavBar()">About</a>
-    <a [routerLink]="['/blog']" (click)="toggleNavBar()">Blog</a>
-    <a [routerLink]="['/contact']"(click)="toggleNavBar()">Contact</a>
+    <a [routerLink]="['/']" class="active" (click)="toggleNavBar()" routerLinkActive="activeLink" [routerLinkActiveOptions]="{exact:true}">Home</a>
+    <span class="navbar-sep"></span>
+    <a [routerLink]="['/portfolio']" (click)="toggleNavBar()" routerLinkActive="activeLink">Portfolio</a>
+    <span class="navbar-sep"></span>
+    <a [routerLink]="['/about']" (click)="toggleNavBar()" routerLinkActive="activeLink">About</a>
+    <span class="navbar-sep"></span>
+    <a [routerLink]="['/blog']" (click)="toggleNavBar()" routerLinkActive="activeLink">Blog</a>
+    <span class="navbar-sep"></span>
+    <a [routerLink]="['/contact']"(click)="toggleNavBar()" routerLinkActive="activeLink">Contact</a>
   </div>
 </div>
