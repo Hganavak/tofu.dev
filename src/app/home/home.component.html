@@ -49,8 +49,8 @@
       <strong>Summary:</strong>
       <p innerHtml="{{ portfolioItem.workDescription | mdToHtml }}"></p>
     </div>
-    <img src="{{ portfolioItem.image1.fields.file.url }}" class="preview-img-picture">
-    <img src="{{ portfolioItem.image2.fields.file.url }}" class="preview-img-picture mobile">
+    <img src="{{ portfolioItem.image1.fields.file.url }}" class="preview-img-picture" data-aos="fade-left">
+    <img src="{{ portfolioItem.image2.fields.file.url }}" class="preview-img-picture mobile" data-aos="fade-left">
     <div class="item-cta">
         <form [routerLink]="['/portfolio', portfolioItem.slug]">
           <input class="cta cta-secondary" type="submit" value="View Project" />

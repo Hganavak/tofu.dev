@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -18,5 +19,8 @@ export class AppComponent implements OnInit {
       }
       window.scrollTo(0, 0); // Scroll to the top of pages after navigating
     });
+
+    // Initialize Animate on Scroll
+    AOS.init();
   }
 }
