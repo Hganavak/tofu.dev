@@ -1,5 +1,5 @@
 <header class="home-banner">
-  <div id="title">
+  <div id="title" data-aos="zoom-in" data-aos-duration="500">
   </div>
   <div id="description">
     <h2 id="name-and-title">Sam Kavanagh, PhD</h2>
@@ -11,7 +11,7 @@
     </form>
 
   </div>
-  <div id="banner-img"></div>
+  <div id="banner-img" data-aos="fade-left" data-aos-duration="1000"></div>
 </header>
 
 <main class="sections">
@@ -22,7 +22,7 @@
       <h1>Portfolio</h1>
     </div>
 
-    <div id="portfolio-center">
+    <div id="portfolio-center" data-aos="fade-up">
       <div id="caption">
         <h3>My Work</h3>
         <p>Scroll down for a list of recent projects.</p>
@@ -50,7 +50,7 @@
       <p innerHtml="{{ portfolioItem.workDescription | mdToHtml }}"></p>
     </div>
     <img src="{{ portfolioItem.image1.fields.file.url }}" class="preview-img-picture" data-aos="fade-left">
-    <img src="{{ portfolioItem.image2.fields.file.url }}" class="preview-img-picture mobile" data-aos="fade-left">
+    <img src="{{ portfolioItem.image2.fields.file.url }}" class="preview-img-picture mobile" data-aos="fade-left" data-aos-offset="300">
     <div class="item-cta">
         <form [routerLink]="['/portfolio', portfolioItem.slug]">
           <input class="cta cta-secondary" type="submit" value="View Project" />
@@ -59,43 +59,12 @@
   </section>
 </section>
   
-  <!-- <section class="portfolio-item">
-    <h1 class="item-title">ResearchHub</h1>
-    <div class="item-description">
-      <p>The ResearchHub connects users with people, resources, and services from across the University of Auckland to accelerate research.</p>
-      <p><strong>Technologies:</strong> Angular/TypeScript, Angular Material, Spring, Docker, MySQL</p>
-   </div>
-    <img src="./assets/images/research-hub.png" class="preview-img-picture">
-    <img src="./assets/images/research-hub-mobile.png" class="preview-img-picture mobile">
-    <div class="item-cta">
-        <form [routerLink]="['/portfolio']">
-          <input class="cta cta-secondary" type="submit" value="View Project" />
-        </form>
-      </div>
-  </section>
-
-
-  <section class="portfolio-item">
-    <h1 class="item-title">Tofu.dev</h1>
-    <div class="item-description">
-      <p>What's a better example of my design process than my personal website?</p>
-      <p><strong>Technologies:</strong> Angular/TypeScript.</p>
-   </div>
-    <img src="./assets/images/tofu-dot-dev.png" class="preview-img-picture">
-    <img src="./assets/images/tofu-dot-dev-mobile.png" class="preview-img-picture mobile">
-    <div class="item-cta">
-        <form [routerLink]="['/portfolio']">
-            <input class="cta cta-secondary" type="submit" value="View Project" />
-        </form>
-      </div>
-  </section> -->
-
   <section id="blog">
     <div id="blog-description">
       <h1>Blog</h1>
       <h4>Interested in what I've got to say? That's weird, but okay:</h4>
     </div>
-    <div id="blog-items-container" *ngIf="blogPosts$ | async as blogPosts">
+    <div id="blog-items-container" *ngIf="blogPosts$ | async as blogPosts" data-aos="zoom-out" data-aos-duration="1000">
       <div class="blog-item-card" *ngFor="let blogPost of blogPosts">
           <div class="blog-item-img">
             <img src="{{ blogPost.image.fields.file.url }}" style="width: 100%; height: 100%"  width="100%" />
@@ -122,7 +91,7 @@
   <section id="about">
     <h1 >About</h1>
 
-    <div class="me">
+    <div class="me" data-aos="zoom-in" data-aos-duration="500">
       <img src="./assets/images/me.png" class="me">
     </div>
   
