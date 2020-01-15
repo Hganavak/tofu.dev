@@ -50,7 +50,7 @@
       <p innerHtml="{{ portfolioItem.workDescription | mdToHtml }}"></p>
     </div>
     <img src="{{ portfolioItem.image1.fields.file.url }}" class="preview-img-picture" data-aos="fade-left">
-    <img src="{{ portfolioItem.image2.fields.file.url }}" class="preview-img-picture mobile" data-aos="fade-left" data-aos-offset="300">
+    <img src="{{ portfolioItem.image2.fields.file.url }}" class="preview-img-picture mobile" data-aos="fade-left" data-aos-delay="300">
     <div class="item-cta">
         <form [routerLink]="['/portfolio', portfolioItem.slug]">
           <input class="cta cta-secondary" type="submit" value="View Project" />
@@ -64,7 +64,7 @@
       <h1>Blog</h1>
       <h4>Interested in what I've got to say? That's weird, but okay:</h4>
     </div>
-    <div id="blog-items-container" *ngIf="blogPosts$ | async as blogPosts" data-aos="zoom-out" data-aos-duration="1000">
+    <div id="blog-items-container" *ngIf="blogPosts$ | async as blogPosts" data-aos="zoom-out" data-aos-duration="500">
       <div class="blog-item-card" *ngFor="let blogPost of blogPosts">
           <div class="blog-item-img">
             <img src="{{ blogPost.image.fields.file.url }}" style="width: 100%; height: 100%"  width="100%" />

@@ -1,5 +1,5 @@
 <header class="portfolio-banner">
-  <div id="title">
+  <div id="title" data-aos="fade-in" data-aos-duration="500">
   </div>
   <div id="description">
     <h2 id="name-and-title">Welcome to My Portfolio</h2>
@@ -10,7 +10,7 @@
     </form>
 
   </div>
-  <div id="banner-img"></div>
+  <div id="banner-img" data-aos="fade-up" data-aos-duration="1000"></div>
 </header>
 
 <section id="portfolio-items-container" *ngIf="portfolioItems$ | async as portfolioItems">
@@ -20,8 +20,8 @@
       <p innerHtml="{{ portfolioItem.summary | mdToHtml }}"></p>
       <p><strong>Summary: </strong><span innerHtml="{{ portfolioItem.workDescription | mdToHtml }}"></span></p>
     </div>
-    <img src="{{ portfolioItem.image1.fields.file.url }}" class="preview-img-picture">
-    <img src="{{ portfolioItem.image2.fields.file.url }}" class="preview-img-picture mobile">
+    <img src="{{ portfolioItem.image1.fields.file.url }}" class="preview-img-picture" data-aos="fade-left">
+    <img src="{{ portfolioItem.image2.fields.file.url }}" class="preview-img-picture mobile" data-aos="fade-left" data-aos-delay="300">
     <div class="item-cta">
         <form [routerLink]="['/portfolio', portfolioItem.slug]">
           <input class="cta cta-secondary" type="submit" value="View Project" />
