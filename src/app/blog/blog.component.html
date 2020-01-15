@@ -1,11 +1,12 @@
 <header class="blog-banner">
-  <div id="title"></div><!-- Blog Title Image -->
+  <div id="title" data-aos="zoom-out" data-aos-duration="500"></div><!-- Blog Title Image -->
   <div id="subtitle">
     <h4>Interested in what I've got to say? That's weird, but okay.</h4>
   </div>
 </header>
 
-<section id="blog-items-container" *ngIf="blogPosts$ | async as blogPosts">
+<section id="blog-items-container" *ngIf="blogPosts$ | async as blogPosts" 
+  data-aos="fade-up" data-aos-duration="1000">
 
   <div class="blog-item-card" *ngFor="let blogPost of blogPosts">
 
