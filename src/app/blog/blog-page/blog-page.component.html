@@ -1,9 +1,9 @@
 <div id="blog-item-container" *ngIf="blogPost$ | async as blogPost">
 
-    <section id="blog-item-banner" [routerLink]="['/blog']"></section>
+    <section id="blog-item-banner" [routerLink]="['/blog']" data-aos="zoom-out" data-aos-duration="500"></section>
 
     <section id="blog-ribbon">
-        <h1 id="title">{{ blogPost.title }}</h1>
+        <h1 id="title" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="300">{{ blogPost.title }}</h1>
         <h4 class="created">{{ blogPost.created | date: 'fullDate' }}</h4>
         <div id="tags" style="margin: 15px;">
             <strong>Tags: &nbsp;</strong>
@@ -16,7 +16,7 @@
             <h2>Summary</h2>
              <h4>{{ blogPost.summary }}</h4>
         </div>
-        <div id="blog-summary-img">
+        <div id="blog-summary-img" data-aos="flip-right" data-aos-delay="600">
             <img id="blog-item-image" src="{{ blogPost.image.fields.file.url }}" />
         </div>
     </section>
