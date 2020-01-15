@@ -20,6 +20,7 @@ $navbar-mobile-height: 5vh;
 html {
     font-family: 'Roboto', sans-serif;
     color: $base-font-color;
+    overflow-x: hidden; // Disable scroll bars during animations
 }
 
 html, body {
