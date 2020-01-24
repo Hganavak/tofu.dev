@@ -336,8 +336,11 @@ header {
     #publication-cards-container {
         display: grid;
 
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: stretch;
+
+        max-width: 1920px;
+        margin: 0 auto;
 
         grid-gap: 2rem;
 
