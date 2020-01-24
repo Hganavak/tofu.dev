@@ -18,6 +18,16 @@ section {
     &:nth-of-type(odd) {
         background-color: $tofu-primary;
         color: $tofu-secondary;
+
+        a {
+            color: $tofu-secondary;
+            border-bottom: 1px solid $tofu-secondary;
+
+            &:hover {
+                text-decoration: none;
+                border-bottom: 2px solid $tofu-secondary;
+            }
+        }
     }
 
 }
