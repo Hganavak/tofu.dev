@@ -29,6 +29,7 @@ header {
     background-position-x: 8%;
     padding: 3em 5% 0 5%;
     font-size: smaller;
+    overflow-x: hidden !important;
 
     grid-template-rows: auto;
     grid-template-columns: auto;
