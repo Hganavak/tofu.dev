@@ -10,6 +10,7 @@ header {
 
 .contact-banner {
     display: grid;
+    overflow-x: hidden;
 
     background-image: url(../../assets/images/header-banner-footer.svg);
     background-repeat: no-repeat;
