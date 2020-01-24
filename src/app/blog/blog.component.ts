@@ -25,21 +25,7 @@ export class BlogComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    // this.contentfulService.logContent('5qCY28J8NjC0XVIE4UU9HN');
     this.blogPosts$ = this.contentfulService.getEntries('blogPost');
-    // this.blogPost$ = this.contentfulService.getContent('5qCY28J8NjC0XVIE4UU9HN');
-    // this.indBlogPost$ = this.contentfulService.getBlogPostBySlug('5qCY28J8NjC0XVIE4UU9HN');
-
-
-    // console.log(this.blogPosts$[0]);
-
-
-    // Get route info
-    this.route.paramMap.pipe(
-      tap(x => console.log(x))
-    // switchMap((params: ParamMap) =>
-      // this.service.getHero(params.get('id')))
-    );
   }
 
 }
