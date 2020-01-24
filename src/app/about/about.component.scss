@@ -5,7 +5,10 @@ section, header {
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
 
     // TODO: Move this stuff into base styles.scss
     &:nth-of-type(even) {
@@ -16,7 +19,6 @@ section {
         background-color: $tofu-primary;
         color: $tofu-secondary;
     }
-
 
 }
 
@@ -34,8 +36,9 @@ header {
     background-position-x: 10%;
     padding-top: 3em;
     font-size: smaller;
+    overflow-x: hidden !important;
 
-    grid-template-rows: 5% 20% 75%;
+    grid-template-rows: 5% 12% 83%;
     grid-template-columns: auto;
 
     grid-template-areas:
@@ -127,13 +130,14 @@ header {
 
 #technologies {
     display: grid;
-    grid-template-rows: 10% 30% 60%;
+    grid-template-rows: auto;
     grid-template-areas:
         "technology-title"
         "technology-icons"
         "technology-description";
     justify-items: center;
     align-items: center;
+    height: auto;
 
     @include size(large) {
         grid-template-columns: 50% 50%;
@@ -154,6 +158,8 @@ header {
         grid-area: technology-icons;
         height: 100%;
         width: 100%;
+
+        min-height: 30vh;
 
         grid-template-columns: 100%;
         grid-template-rows: 100%;
