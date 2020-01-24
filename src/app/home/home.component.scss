@@ -271,16 +271,10 @@ header {
     grid-row-gap: 1em;
     justify-items: center;
     grid-template-columns: 100%;
-    grid-template-rows: 15% 30% 30% 35%;
-    grid-template-areas: 
-        "me-title"
-        "me"
-        "me-description"
-        "me-cta";
+    grid-template-rows: auto;
 
     h1 {
         padding-top: 1em;
-        grid-area: me-title;
     }
 
     & > * {
@@ -288,7 +282,6 @@ header {
     }
 
     .me {
-        grid-area: me;
         align-self: center;
         height: 100%;
         border-radius: 100%;
@@ -300,12 +293,8 @@ header {
         line-height: 2em;
         font-variant: small-caps;
         letter-spacing: 0.1em;
-        grid-area: me-description;
     }
 
-    .me-cta {
-        grid-area: me-cta;
-    }
 }
 
 .portfolio-item {
