@@ -16,6 +16,10 @@
 .portfolio-item {
     min-height: 100vh;
 
+    @include size(medium) {
+        font-size: 115%;
+    }
+
     &:nth-of-type(odd) {
         background-color: $tofu-primary;
         color: $tofu-secondary;
