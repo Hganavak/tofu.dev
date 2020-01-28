@@ -49,6 +49,14 @@ h1, h2 {
         color: $tofu-secondary;
         min-height: 275px;
         line-height: 1.5em;
+
+        #summary {
+            font-size: medium;
+
+            @include size(medium){
+                font-size: 115%;
+            }
+        }
     }
 
     // We use a darker background on this page to contrast the info boxes
@@ -61,6 +69,8 @@ h1, h2 {
         grid-template-columns: 100%;
 
         $work-intro-computer-image-size: 50vh;
+
+        font-size: 110%;
  
         border: 1px solid $tofu-primary;
         border-radius: 3%;

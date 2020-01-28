@@ -152,6 +152,10 @@ header {
     align-items: center;
     height: auto;
 
+    @include size(medium) {
+        font-size: 130%;
+    }
+
     @include size(large) {
         grid-template-columns: 50% 50%;
         grid-template-rows: 15% 85%;
@@ -239,7 +243,6 @@ header {
              padding-top: 0;
              align-self: start;
              width: 75%;
-             font-size: large;
          }
      }
 
@@ -259,6 +262,7 @@ header {
 
     @include size(medium) {
         grid-template-rows: 15% 40% 55%;
+        font-size: 130%;
     }
 
     @include size(large) {
