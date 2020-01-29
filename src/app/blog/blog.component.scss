@@ -55,7 +55,8 @@ header {
     padding-bottom: 5%;
     background-image: url(../../assets/images/header-banner-footer.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: bottom;
 
     .blog-item-card {
         display: grid;
