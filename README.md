@@ -1,27 +1,20 @@
-# Redesign
+# Sam Kavanagh's Personal Website: [Tofu.Dev](https://tofu.dev)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
+It might be a little overkill for a personal website, but in order to demonstrate my skills/knowledge I've utilized all the most modern technologies and design principles in the design of [tofu.dev](https://tofu.dev).
 
-## Development server
+## Front-End
+This project is built on the `Angular` framework. The front-end is built using `TypeScript`/`JavaScript`, as well as `Sass`/`CSS`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Responsive design principles have been used throughout, meaning the site will look great whether viewed on desktops, mobiles, or tablets.
 
-## Code scaffolding
+The site is a single-page application (SPA), meaning the entire page does not need to be reloaded when visiting different parts of the website. This provides a much smoother user experience. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Back-End
+The content management system (CMS) `Contentful` is used to host this site's content. This allows the content to be edited, and new content added via a friendly user interface, and requires no knowledge of programming. Changes to the content via `Contentful` are reflected instantly.
 
-## Build
+The content (including this!) is written in `Markdown`, via a rich text-editing interface on `Contentful`. This `Markdown` content is then automatically converted to `HTML` and rendered as you see it here! 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Dev-Ops
+The code for this website is managed using the version control system `Git`, and is publicly viewable on `GitHub`, I have nothing to hide!
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The website also supports continuous delivery via `Netlify`, this means that any updates to the code are reflected in less than a minute, and without any downtime to users!
