@@ -38,6 +38,11 @@ header {
         "banner-img"
         "description";
 
+    @include size(medium) {
+        background-size: contain;
+        background-position: bottom;
+    }
+
     @include size(large) {
         padding: 0 5% 0 5%;
         font-size: medium;

@@ -37,6 +37,8 @@ header {
         font-size: medium;
         letter-spacing: 0.10em;
         line-height: 1.75em;
+        background-size: contain;
+        background-position: bottom;
     }
 
     @include size(large) {
