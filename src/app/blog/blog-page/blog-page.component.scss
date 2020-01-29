@@ -112,10 +112,11 @@ section {
 
         background-image: url(../../../assets/images/header-banner-footer.svg);
         background-repeat: no-repeat;
-        background-position-x: 7%;
 
-        background-size: cover;
-        padding: 0 10% 250px 10%;
+        background-size: contain;
+        background-position: bottom;
+
+        padding: 0 10% 3vh 10%;
         margin: 0;
 
 
