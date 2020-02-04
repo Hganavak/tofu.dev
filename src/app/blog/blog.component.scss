@@ -66,14 +66,14 @@ header {
 
         grid-template-rows: 35% 12.5% 5% 12.5% 22.5% 12.5%;
 
-        box-shadow: 5px 15px 35px $tofu-primary;
+        box-shadow: 0 0 90px $tofu-primary;
 
         &>* {
             // border: solid 1px blue;
         }
 
         .title {
-            align-self: start;
+            align-self: center;
             @include size(medium){
                 line-height: 1.55em;
             }
