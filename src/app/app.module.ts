@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MdToHtmlPipe } from './md-to-html.pipe';
 import { BlogPageComponent } from './blog/blog-page/blog-page.component';
 import { PortfolioPageComponent } from './portfolio/portfolio-page/portfolio-page.component';
+import  * as GitHubCalendar from 'node_modules/github-calendar';
 
 @NgModule({
   declarations: [
@@ -26,11 +27,11 @@ import { PortfolioPageComponent } from './portfolio/portfolio-page/portfolio-pag
     FooterComponent,
     MdToHtmlPipe,
     BlogPageComponent,
-    PortfolioPageComponent
+    PortfolioPageComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

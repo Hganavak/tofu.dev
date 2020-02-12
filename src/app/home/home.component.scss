@@ -300,6 +300,27 @@ header {
         letter-spacing: 0.1em;
     }
 
+    /deep/ .github-calendar {
+
+        @include size(large) {
+            width: 65%;
+
+        }
+        margin: auto;
+
+        #user-activity-overview, .contrib-footer {
+            display: none;
+        }
+
+        .contrib-column {
+            &.contrib-column-first {
+                display: block;
+            }
+            display: none;
+        }
+    }
+
+
 }
 
 .portfolio-item {
