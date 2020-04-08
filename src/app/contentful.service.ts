@@ -3,7 +3,6 @@ import * as contentful from 'contentful';
 import { environment } from 'src/environments/environment';
 import { Observable, from } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
-import { markViewDirty } from '@angular/core/src/render3/instructions';
 
 @Injectable({
   providedIn: 'root'

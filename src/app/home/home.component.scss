@@ -300,7 +300,7 @@ header {
         letter-spacing: 0.1em;
     }
 
-    /deep/ .github-calendar {
+    ::deep .github-calendar {
 
         @include size(large) {
             width: 65%;
