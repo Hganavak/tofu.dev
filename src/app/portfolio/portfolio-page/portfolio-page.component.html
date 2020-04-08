@@ -16,7 +16,7 @@
 
     <div id="portfolio-item-body">
         <section id="work-intro-container">
-            <img src="{{ portfolioItem.imageImac.fields.file.url }}" id="work-intro-computer" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
+            <img src="{{ portfolioItem.imageImac.fields.file.url }}?q=10" id="work-intro-computer" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
             <div id="work-description">
             <h1 id="work-description-title">Summary</h1>
             <p innerHtml="{{ portfolioItem.workDescription | mdToHtml }}"></p>
@@ -26,10 +26,10 @@
         <section id="technologies">
         <div id="technology-description">
             <h1>Technologies</h1>
-            <p innerHtml="{{ portfolioItem.technologies | mdToHtml }}"></p>
+            <p innerHtml="{{ portfolioItem.technologies | mdToHtml }}?q=10"></p>
         </div>
         <div id="technology-mobile-image">
-            <img src="{{ portfolioItem.imageIphone.fields.file.url }}" style="height: 100%;" data-aos="fade-left">
+            <img src="{{ portfolioItem.imageIphone.fields.file.url }}?q=20" style="height: 100%;" data-aos="fade-left">
         </div>
         </section>
 
@@ -53,7 +53,7 @@
         <section id="prototypes">
             <h1>Prototypes</h1>
             <div class="img-with-caption" *ngFor="let prototype of portfolioItem.prototypes">
-                <img src="{{ prototype.fields.file.url }}" data-aos="fade-in" data-aos-duration="1000">
+                <img src="{{ prototype.fields.file.url }}?q=30" data-aos="fade-in" data-aos-duration="1000">
                 <p innerHtml="{{ prototype.fields.description | mdToHtml }}"></p>
             </div>
         </section>
@@ -68,7 +68,7 @@
 
         <section id="final-product" data-aos="fade-in">
             <div class="img-with-caption" *ngFor="let final of portfolioItem.finalProduct">
-                <img src="{{ final.fields.file.url }}" data-aos="fade-up" data-aos-duration="1000">
+                <img src="{{ final.fields.file.url }}?q=30" data-aos="fade-up" data-aos-duration="1000">
                 <p>{{ final.fields.description }}</p>
             </div>
         </section>

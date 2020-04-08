@@ -14,10 +14,10 @@
     <section id="blog-summary">
         <div id="blog-summary-text">
             <h2>Summary</h2>
-             <h4>{{ blogPost.summary }}</h4>
+            <h4>{{ blogPost.summary }}</h4>
         </div>
         <div id="blog-summary-img" data-aos="flip-right" data-aos-delay="600">
-            <img id="blog-item-image" src="{{ blogPost.image.fields.file.url }}" />
+            <img id="blog-item-image" src="{{ blogPost.image.fields.file.url }}?q=30" />
         </div>
     </section>
 
