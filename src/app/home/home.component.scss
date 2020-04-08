@@ -300,12 +300,12 @@ header {
         letter-spacing: 0.1em;
     }
 
-    ::deep .github-calendar {
+    ::ng-deep .github-calendar {
 
         @include size(large) {
             width: 65%;
-
         }
+
         margin: auto;
 
         #user-activity-overview, .contrib-footer {
