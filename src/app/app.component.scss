@@ -6,4 +6,6 @@
     @include size(medium) {
         margin-top: calc(#{$navbar-height}*2);
     }
+
+    min-height: 90vh;
 }
