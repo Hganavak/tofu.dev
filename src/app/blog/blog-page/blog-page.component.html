@@ -25,9 +25,11 @@
         <div innerHtml="{{ blogPost.body | mdToHtml }}"></div>
         <div style="float: right; margin-bottom: 15vh">
             <form [routerLink]="['/blog']">
-                <input class="cta cta-secondary" type="submit" value="View All Posts" style="margin: 0 10px 0 10px"/>
+                <input class="cta cta-secondary" type="submit" value="View All Posts" style="margin: 0 10px 0 10px" />
             </form>
         </div>
     </section>
+
+    <div class="banner-footer"></div>
 
 </div>

@@ -71,6 +71,11 @@ section {
 
     }
 
+    #blog-summary, #blog-body {
+        max-width: 1200px;
+        margin: auto;
+    }
+
     #blog-summary {
         grid-area: summary;
         display: grid;
@@ -108,17 +113,14 @@ section {
         min-height: 50vh;
         line-height: 2em;
         letter-spacing: 0.75px;
-        max-width: 100%;
 
-        background-image: url(../../../assets/images/header-banner-footer.svg);
-        background-repeat: no-repeat;
-
-        background-size: contain;
-        background-position: bottom;
-
-        padding: 0 10% 3vh 10%;
-        margin: 0;
-
+        margin: auto;
+        width: 90%;
+        max-width: 1200px;
     }
 
+    .banner-footer {
+        height: 8vh;
+        background-image: linear-gradient(white, $tofu-primary);
+    }
 }
