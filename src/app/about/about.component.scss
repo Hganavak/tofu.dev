@@ -160,7 +160,7 @@ header {
 
     @include size(large) {
         grid-template-columns: 50% 50%;
-        grid-template-rows: 15% 85%;
+        grid-template-rows: auto;
         grid-template-areas:
             "technology-title technology-title"
             "technology-description technology-icons";
@@ -252,7 +252,6 @@ header {
   
 #about-me {
     display: grid;
-    // background-image: linear-gradient($tofu-secondary, $tofu-secondary, $tofu-secondary, $tofu-primary);
 
     align-items: center;
     justify-items: center;
@@ -263,7 +262,6 @@ header {
         "about-me-description";
 
     @include size(medium) {
-        grid-template-rows: 15% 40% 55%;
         font-size: 130%;
     }
 

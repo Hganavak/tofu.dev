@@ -7,7 +7,7 @@
     <h2>Web Developer</h2>
 
     <form [routerLink]="['/contact']">
-      <input class="cta cta-secondary" type="submit" value="Get in Contact" style="margin: 0 10px 0 10px"/>
+      <input class="cta cta-secondary" type="submit" value="Get in Contact" style="margin: 0 10px 0 10px" />
     </form>
 
   </div>
@@ -29,36 +29,38 @@
         <p>Alternatively you can check out my GitHub profile.</p>
       </div>
       <div id="portfolio-buttons">
-          <form [routerLink]="['/portfolio']">
-            <input class="cta cta-secondary" type="submit" value="View Projects" style="margin: 0 10px 0 10px"/>
-          </form>
+        <form [routerLink]="['/portfolio']">
+          <input class="cta cta-secondary" type="submit" value="View Projects" style="margin: 0 10px 0 10px" />
+        </form>
 
-          <form action="https://github.com/Hganavak">
-            <input class="cta cta-secondary" type="submit" value="View GitHub Profile" />
-          </form>
+        <form action="https://github.com/Hganavak">
+          <input class="cta cta-secondary" type="submit" value="View GitHub Profile" />
+        </form>
       </div>
     </div>
-    
+
   </section>
 
-<section id="portfolio-items-container" *ngIf="portfolioItems$ | async as portfolioItems">
-  <section class="portfolio-item" *ngFor="let portfolioItem of portfolioItems">
-    <h1 class="item-title">{{ portfolioItem.title }}</h1>
-    <div class="item-description">
-      <p innerHtml="{{ portfolioItem.summary | mdToHtml }}"></p>
-      <strong>Summary:</strong>
-      <p innerHtml="{{ portfolioItem.workDescription | mdToHtml }}"></p>
-    </div>
-    <img src="{{ portfolioItem.image1.fields.file.url }}?fm=jpg&q=30" class="preview-img-picture" data-aos="fade-left">
-    <img src="{{ portfolioItem.image2.fields.file.url }}?fm=jpg&q=30" class="preview-img-picture mobile" data-aos="fade-left" data-aos-delay="300">
-    <div class="item-cta">
+  <section id="portfolio-items-container" *ngIf="portfolioItems$ | async as portfolioItems">
+    <section class="portfolio-item" *ngFor="let portfolioItem of portfolioItems">
+      <h1 class="item-title">{{ portfolioItem.title }}</h1>
+      <div class="item-description">
+        <p innerHtml="{{ portfolioItem.summary | mdToHtml }}"></p>
+        <strong>Summary:</strong>
+        <p innerHtml="{{ portfolioItem.workDescription | mdToHtml }}"></p>
+      </div>
+      <img src="{{ portfolioItem.image1.fields.file.url }}?fm=jpg&q=30" class="preview-img-picture"
+        data-aos="fade-left">
+      <img src="{{ portfolioItem.image2.fields.file.url }}?fm=jpg&q=30" class="preview-img-picture mobile"
+        data-aos="fade-left" data-aos-delay="300">
+      <div class="item-cta">
         <form [routerLink]="['/portfolio', portfolioItem.slug]">
           <input class="cta cta-secondary" type="submit" value="View Project" />
         </form>
       </div>
+    </section>
   </section>
-</section>
-  
+
   <section id="blog">
     <div id="blog-description">
       <h1>Blog</h1>
@@ -66,35 +68,35 @@
     </div>
     <div id="blog-items-container" *ngIf="blogPosts$ | async as blogPosts" data-aos="zoom-out" data-aos-duration="500">
       <div class="blog-item-card" *ngFor="let blogPost of blogPosts">
-          <div class="blog-item-img">
-            <img src="{{ blogPost.image.fields.file.url }}?fm=jpg&q=20" style="width: 100%; height: 100%"  width="100%" />
-          </div>
-          <h4 class="title">{{ blogPost.title }}</h4>
-          <div class="created">{{ blogPost.created | date: 'fullDate' }} </div>
-          <div class="tags">
-            <strong>Tags:&nbsp;</strong>
-            <span *ngFor="let tag of blogPost.tags" class="tag"> {{ tag }} </span>
-          </div>
-          <h5 class="summary">{{ blogPost.summary }}</h5>
-          <form [routerLink]="['/blog', blogPost.slug ]">
-            <input class="cta" type="submit" value="Read" />
-          </form>
+        <div class="blog-item-img">
+          <img src="{{ blogPost.image.fields.file.url }}?fm=jpg&q=20" style="width: 100%; height: 100%" width="100%" />
+        </div>
+        <h4 class="title">{{ blogPost.title }}</h4>
+        <div class="created">{{ blogPost.created | date: 'fullDate' }} </div>
+        <div class="tags">
+          <strong>Tags:&nbsp;</strong>
+          <span *ngFor="let tag of blogPost.tags" class="tag"> {{ tag }} </span>
+        </div>
+        <h5 class="summary">{{ blogPost.summary }}</h5>
+        <form [routerLink]="['/blog', blogPost.slug ]">
+          <input class="cta" type="submit" value="Read" />
+        </form>
       </div>
     </div>
     <div id="view-blog">
       <form [routerLink]="['/blog']">
-          <input class="cta cta-secondary" type="submit" value="View All Posts" style="margin: 0 10px 0 10px"/>
+        <input class="cta cta-secondary" type="submit" value="View All Posts" style="margin: 0 10px 0 10px" />
       </form>
     </div>
   </section>
 
   <section id="about">
-    <h1 >About</h1>
+    <h1>About</h1>
 
     <div class="me" data-aos="zoom-in" data-aos-duration="500">
       <img src="./assets/images/me.png" class="me">
     </div>
-  
+
     <div class="me-description">
       <h3>Hi, I'm Sam.</h3>
       <h4>Fancy seeing you here.</h4>
@@ -111,9 +113,9 @@
     </div>
 
     <div class="me-cta">
-        <form [routerLink]="['/about']">
-            <input class="cta cta-secondary" type="submit" value="About Me" />
-        </form>
+      <form [routerLink]="['/about']">
+        <input class="cta cta-secondary" type="submit" value="About Me" />
+      </form>
     </div>
 
   </section>
