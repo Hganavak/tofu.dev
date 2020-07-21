@@ -144,10 +144,6 @@ header {
             text-align: center;
             align-self: center;
 
-            @include size(large) {
-                align-self: baseline;
-            }
-
             input {
                 margin-top: 1em;
             }
@@ -177,7 +173,7 @@ header {
 
         @include size(large) {
             justify-content: space-around;
-            padding: 0 10%;
+            padding: 0 8%;
         }
 
         align-items: stretch;
@@ -387,7 +383,7 @@ header {
         padding: 0 5% 0 5%;
 
         grid-template-columns: 30% 55% 15%;
-        grid-template-rows: 30% 40% 30%;
+        grid-template-rows: auto;
         justify-items: center;
         align-items: center;
 
