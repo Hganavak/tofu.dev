@@ -149,13 +149,13 @@ header  {
 
     code {
         color: $tofu-primary;
-        font-weight: bolder;
-        font-size: 1.25em;
-        letter-spacing: 0.1em;
+        font-weight: normal;
         font-family: 'Courier New', Courier, monospace;
     }
 
     pre {
+        font-size: normal;
+        line-height: 1.25em;
         margin: 35px 0;
         padding: 35px;
         border: 1px solid $tofu-primary;
