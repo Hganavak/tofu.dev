@@ -32,8 +32,7 @@ export class ContentfulService {
   // Get all entries of type
   getEntries(contentType: string, limit?: number) {
     return from(this.client.getEntries({ 'content_type': contentType, 'order': '-sys.createdAt', limit: limit})).pipe(
-      map(entries => entries.items.map(entry => entry.fields)),
-      tap(x => console.log(x))
+      map(entries => entries.items.map(entry => entry.fields))
     );
   }
 
@@ -43,8 +42,7 @@ export class ContentfulService {
       'content_type': 'blogPost',
       'fields.slug[in]': slug,
       })).pipe(
-        map(entries => entries.items[0].fields),
-        tap(x => console.log(x))
+        map(entries => entries.items[0].fields)
     );
   }
 
@@ -54,8 +52,7 @@ export class ContentfulService {
       'content_type': 'portfolioItem',
       'fields.slug[in]': slug,
       })).pipe(
-        map(entries => entries.items[0].fields),
-        tap(x => console.log(x))
+        map(entries => entries.items[0].fields)
     );
   }
 

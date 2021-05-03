@@ -1,3 +1,4 @@
+import { TitleService } from './../../title.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
@@ -11,11 +12,12 @@ import { ContentfulService } from 'src/app/contentful.service';
 export class PortfolioPageComponent implements OnInit {
 
   private portfolioItemSlug: string;
-  public portfolioItem$: Observable<any>;
+  public portfolioItem;
 
   constructor(
     private route: ActivatedRoute,
-    private contentfulService: ContentfulService
+    private contentfulService: ContentfulService,
+    private _titleService: TitleService
   ) { }
 
   ngOnInit() {
@@ -24,7 +26,10 @@ export class PortfolioPageComponent implements OnInit {
       this.portfolioItemSlug = paramMap.get('id')
     );
 
-    this.portfolioItem$ = this.contentfulService.getPortfolioItemBySlug(this.portfolioItemSlug); // Implement
+  this.contentfulService.getPortfolioItemBySlug(this.portfolioItemSlug).subscribe(res => { 
+    this.portfolioItem = res;
+    this._titleService.setTitle('Portfolio - ' + res['title']);
+  });
 
   }
 

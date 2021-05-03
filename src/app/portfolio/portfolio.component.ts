@@ -1,3 +1,4 @@
+import { TitleService } from './../title.service';
 import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from '../contentful.service';
 import { Observable } from 'rxjs';
@@ -17,7 +18,10 @@ export class PortfolioComponent implements OnInit {
     private contentfulService: ContentfulService,
     private route: ActivatedRoute,
     private router: Router,
-  ) { }
+    private titleService: TitleService
+  ) { 
+    this.titleService.setTitle('Portfolio')
+  }
 
   ngOnInit() {
     this.portfolioItems$ = this.contentfulService.getEntries('portfolioItem');

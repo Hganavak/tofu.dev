@@ -1,305 +1,316 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
 .sections {
-    display: flex;
-    flex-flow: column nowrap;
+  display: flex;
+  flex-flow: column nowrap;
 
-    font-size: smaller;
+  font-size: smaller;
 
-    @include size(medium) {
-        font-size: medium;
-    }
+  @include size(medium) {
+    font-size: medium;
+  }
 }
 
 section {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 header {
-    @include size(medium) {
-        height: $header-height-responsive;
-    }
+  @include size(medium) {
+    height: $header-height-responsive;
+  }
 }
 
-.home-banner  {
-    display: grid;
-    background-image: url(../../assets/images/header-banner-footer.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: 8%;
-    padding: 3em 5% 0 5%;
-    font-size: smaller;
-    overflow-x: hidden !important;
+.home-banner {
+  display: grid;
+  background-image: url(../../assets/images/header-banner-footer.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 8%;
+  padding: 3em 5% 0 5%;
+  font-size: smaller;
+  overflow-x: hidden !important;
 
-    grid-template-rows: auto;
-    grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "title"
+    "banner-img"
+    "description";
+
+  @include size(medium) {
+    background-size: contain;
+    background-position: bottom;
+  }
+
+  @include size(large) {
+    padding: 0 5% 0 5%;
+    font-size: medium;
+    background-position-x: 0;
     grid-template-areas:
-        "title"
-        "banner-img"
-        "description";
-
-    @include size(medium) {
-        background-size: contain;
-        background-position: bottom;
-    }
-
-    @include size(large) {
-        padding: 0 5% 0 5%;
-        font-size: medium;
-        background-position-x: 0;
-        grid-template-areas:
-            "title title"
-            "description banner-img";
-        grid-template-rows: 20% 80%;
-        grid-template-columns: 50% 50%;
-    }
-
+      "title title"
+      "description banner-img";
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 50% 50%;
+  }
 }
 
 .home-banner > * {
-    text-align: center;
+  text-align: center;
 }
 
 #title {
-    grid-area: title;
-    background-image: url(../../assets/images/header-banner-title.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
+  grid-area: title;
+  background-image: url(../../assets/images/header-banner-title.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 #description {
-    grid-area: description;
-    line-height: 2em;
+  grid-area: description;
+  line-height: 2em;
 
-    @include size(large) {
-        line-height: 2.5em;
-
-        #name-and-title {
-            margin: 2em 0 8em 0;
-        }
-
-    }
+  @include size(large) {
+    line-height: 2.5em;
 
     #name-and-title {
-        // margin: 2em 0 4em 0;
+      margin: 2em 0 8em 0;
     }
+  }
+
+  #name-and-title {
+    // margin: 2em 0 4em 0;
+  }
 }
 
 #banner-img {
-    grid-area: banner-img;
-    background-image: url(../../assets/images/me.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom center;
+  grid-area: banner-img;
+  background-image: url(../../assets/images/me.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom center;
 }
 
 #portfolio {
-    background-color: $tofu-primary;
-    color: $tofu-secondary;
+  background-color: $tofu-primary;
+  color: $tofu-secondary;
 
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 10% 90%; // #portfolio-title, #portfolio-center
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 90%; // #portfolio-title, #portfolio-center
+
+  @include size(medium) {
+    grid-template-rows: 5% 95%; // #portfolio-title, #portfolio-center
+  }
+
+  padding: 2.5% 10% 0 10%;
+  justify-items: center;
+
+  #portfolio-center {
+    background-image: url(../../assets/images/product_tour.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    justify-self: stretch;
+
+    align-items: end;
 
     @include size(medium) {
-        grid-template-rows: 5% 95%; // #portfolio-title, #portfolio-center
+      align-items: end;
+      grid-template-rows: 80% 20%;
     }
 
-    padding: 2.5% 10% 0 10%;
-    justify-items: center;
+    display: grid;
+    grid-template-rows: 60% 40%; // #caption, #portfolio-buttons
 
-    #portfolio-center {
-        background-image: url(../../assets/images/product_tour.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: top;
-        justify-self: stretch;
+    #caption {
+      text-align: center;
+      font-family: $impact-font;
+      line-height: 1.5em;
+      font-variant: small-caps;
+      letter-spacing: 0.1em;
+      font-weight: bold;
 
-        align-items: end;
+      align-self: bottom;
 
-        @include size(medium) {
-            align-items: end;
-            grid-template-rows: 80% 20%;
-        }
-
-        display: grid;
-        grid-template-rows: 60% 40%; // #caption, #portfolio-buttons
-
-        #caption {
-            text-align: center;
-            font-family: $impact-font;
-            line-height: 1.5em;
-            font-variant: small-caps;
-            letter-spacing: 0.1em;
-            font-weight: bold;
-
-            align-self: bottom;
-
-            @include size(medium) {
-                align-self: bottom;
-            }
-        }
-
-        #portfolio-buttons {
-            text-align: center;
-            align-self: center;
-
-            input {
-                margin-top: 1em;
-            }
-        }
+      @include size(medium) {
+        align-self: bottom;
+      }
     }
+
+    #portfolio-buttons {
+      text-align: center;
+      align-self: center;
+
+      input {
+        margin-top: 1em;
+      }
+    }
+  }
 }
 
 #blog {
+  display: grid;
+  padding: 1rem 5%;
+  grid-row-gap: 2rem;
+
+  grid-template-rows: auto;
+
+  text-align: center;
+  align-items: center;
+
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+
+  #blog-items-container {
     display: grid;
-    padding: 1rem 5%;
-    grid-row-gap: 2rem;
+    height: auto;
+    min-height: auto;
 
-    grid-template-rows: auto;
+    justify-content: space-around;
 
-    text-align: center;
-    align-items: center;
+    @include size(large) {
+      justify-content: space-around;
+      padding: 0 8%;
+    }
 
-    font-variant: small-caps;
-    letter-spacing: 0.1em;
+    align-items: stretch;
 
-    #blog-items-container {
-        display: grid;
-        height: auto;
-        min-height: auto;
+    grid-template-columns: repeat(auto-fit, minmax(249px, 400px));
+    grid-auto-rows: 620px;
+    grid-row-gap: 3rem;
 
-        justify-content: space-around;
+    padding-bottom: 5%;
 
+    .blog-item-card {
+      display: grid;
+      border-radius: 0 0 3% 3%;
+      border: solid 1px $tofu-primary;
+      text-align: center;
+
+      grid-template-rows: 35% 12.5% 5% 12.5% 22.5% 12.5%;
+
+      box-shadow: 0 0 90px $tofu-primary;
+
+      & > * {
+        // border: solid 1px blue;
+      }
+
+      .title {
+        align-self: center;
+        @include size(medium) {
+          line-height: 1.55em;
+        }
+      }
+
+      .tags {
+        align-self: center;
+        .tag {
+          display: inline-block;
+          border: 1px solid $tofu-primary;
+          color: $tofu-third;
+          border-radius: 5px;
+          padding: 3px 9px;
+          margin: 3px 3px;
+        }
+      }
+
+      .created {
+        align-self: start;
+        font-size: 13pt;
+        color: $tofu-primary;
+      }
+
+      .summary {
+        line-height: 1.85em;
+      }
+
+      // Everything in the card except the image
+      :not(:first-child) {
+        margin: 0 5%;
+      }
+
+      @include size(large) {
+        // padding: 3rem 3rem;
+        // border-radius: 8%;
+      }
+
+      background-color: $tofu-secondary;
+      color: #000;
+
+      p {
+        line-height: 1.25em;
         @include size(large) {
-            justify-content: space-around;
-            padding: 0 8%;
+          line-height: 1.5em;
         }
+        text-align: justify;
+      }
 
-        align-items: stretch;
-
-        grid-template-columns: repeat(auto-fit, minmax(249px, 400px));
-        grid-auto-rows: 620px;
-        grid-row-gap: 3rem;
-
-        padding-bottom: 5%;
-
-        .blog-item-card {
-            display: grid;
-            border-radius: 0 0 3% 3%;
-            border: solid 1px $tofu-primary;
-            text-align: center;
-
-            grid-template-rows: 35% 12.5% 5% 12.5% 22.5% 12.5%;
-
-            box-shadow: 0 0 90px $tofu-primary;
-
-            &>* {
-                // border: solid 1px blue;
-            }
-
-            .title {
-                align-self: center;
-                @include size(medium){
-                    line-height: 1.55em;
-                }
-            }
-
-            .tags {
-                align-self: center;
-                .tag {
-                    display: inline-block;
-                    border: 1px solid $tofu-primary;
-                    color: $tofu-third;
-                    border-radius: 5px;
-                    padding: 3px 9px;
-                    margin: 3px 3px;
-                }
-            }
-
-            .created {
-                align-self: start;
-                font-size: 13pt;
-                color: $tofu-primary;
-            }
-
-            .summary {
-                line-height: 1.85em;
-            }
-
-            // Everything in the card except the image
-            :not(:first-child) {
-                margin: 0 5%;
-            }
-
-
-            @include size(large) {
-                // padding: 3rem 3rem;
-                // border-radius: 8%;
-            }
-
-            background-color: $tofu-secondary;
-            color: #000;
-
-            p {
-                line-height: 1.25em;
-                @include size(large) { line-height: 1.5em; }
-                text-align: justify;
-            }
-
-            form {
-                justify-self: end;
-                align-self: start;
-            }
-
-
-        }
+      form {
+        justify-self: end;
+        align-self: start;
+      }
     }
+  }
 
-    #view-blog {
-        justify-self: center;
-    }
-
-
+  #view-blog {
+    justify-self: center;
+  }
 }
 
 #about {
-    background-color: $tofu-primary;
-    color: white;
-    width: 100%;
-    display: grid;
+  background-color: $tofu-primary;
+  color: white;
+  width: 100%;
+  display: grid;
 
-    grid-row-gap: 1em;
-    justify-items: center;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
+  grid-row-gap: 1em;
+  justify-items: center;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
 
-    h1 {
-        padding-top: 1em;
+  h1 {
+    padding-top: 1em;
+  }
+
+  & > * {
+    text-align: center;
+  }
+
+  .me {
+    align-self: center;
+    height: 100%;
+    border-radius: 100%;
+  }
+
+  .me-description {
+    width: 80%;
+    font-family: $impact-font;
+    line-height: 2em;
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+  }
+
+  ::ng-deep .github-calendar {
+    @include size(large) {
+      width: 65%;
     }
 
-    & > * {
-        text-align: center;
+    margin: auto;
+
+    #user-activity-overview,
+    .contrib-footer {
+      display: none;
     }
 
-    .me {
-        align-self: center;
-        height: 100%;
-        border-radius: 100%;
+    .contrib-column {
+      &.contrib-column-first {
+        display: block;
+      }
+      display: none;
     }
-
-    .me-description {
-        width: 80%;
-        font-family: $impact-font;
-        line-height: 2em;
-        font-variant: small-caps;
-        letter-spacing: 0.1em;
-    }
-
-    ::ng-deep .github-calendar {
-
-        @include size(large) {
-            width: 65%;
+    :root {
+      --color-calendar-graph: 65%;
         }
 
         margin: auto;

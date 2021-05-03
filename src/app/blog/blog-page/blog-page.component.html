@@ -1,35 +1,53 @@
-<div id="blog-item-container" *ngIf="blogPost$ | async as blogPost">
+<div id="blog-item-container" *ngIf="blogPost">
+  <section
+    id="blog-item-banner"
+    [routerLink]="['/blog']"
+    data-aos="zoom-out"
+    data-aos-duration="500"
+  ></section>
 
-    <section id="blog-item-banner" [routerLink]="['/blog']" data-aos="zoom-out" data-aos-duration="500"></section>
+  <section id="blog-ribbon">
+    <h1
+      id="title"
+      data-aos="zoom-out"
+      data-aos-duration="500"
+      data-aos-delay="300"
+    >
+      {{ blogPost.title }}
+    </h1>
+    <h4 class="created">{{ blogPost.created | date: "fullDate" }}</h4>
+    <div id="tags" style="margin: 15px">
+      <strong>Tags: &nbsp;</strong>
+      <span *ngFor="let tag of blogPost.tags" class="tag"> {{ tag }} </span>
+    </div>
+  </section>
 
-    <section id="blog-ribbon">
-        <h1 id="title" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="300">{{ blogPost.title }}</h1>
-        <h4 class="created">{{ blogPost.created | date: 'fullDate' }}</h4>
-        <div id="tags" style="margin: 15px;">
-            <strong>Tags: &nbsp;</strong>
-            <span *ngFor="let tag of blogPost.tags" class="tag"> {{ tag }} </span>
-        </div>
-    </section>
+  <section id="blog-summary">
+    <div id="blog-summary-text">
+      <h2>Summary</h2>
+      <h4>{{ blogPost.summary }}</h4>
+    </div>
+    <div id="blog-summary-img" data-aos="flip-right" data-aos-delay="600">
+      <img
+        id="blog-item-image"
+        src="{{ blogPost.image.fields.file.url }}?q=30"
+      />
+    </div>
+  </section>
 
-    <section id="blog-summary">
-        <div id="blog-summary-text">
-            <h2>Summary</h2>
-            <h4>{{ blogPost.summary }}</h4>
-        </div>
-        <div id="blog-summary-img" data-aos="flip-right" data-aos-delay="600">
-            <img id="blog-item-image" src="{{ blogPost.image.fields.file.url }}?q=30" />
-        </div>
-    </section>
+  <section id="blog-body">
+    <div innerHtml="{{ blogPost.body | mdToHtml }}"></div>
+    <div style="float: right; margin-bottom: 15vh">
+      <form [routerLink]="['/blog']">
+        <input
+          class="cta cta-secondary"
+          type="submit"
+          value="View All Posts"
+          style="margin: 0 10px 0 10px"
+        />
+      </form>
+    </div>
+  </section>
 
-    <section id="blog-body">
-        <div innerHtml="{{ blogPost.body | mdToHtml }}"></div>
-        <div style="float: right; margin-bottom: 15vh">
-            <form [routerLink]="['/blog']">
-                <input class="cta cta-secondary" type="submit" value="View All Posts" style="margin: 0 10px 0 10px" />
-            </form>
-        </div>
-    </section>
-
-    <div class="banner-footer"></div>
-
+  <div class="banner-footer"></div>
 </div>
