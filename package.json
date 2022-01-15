@@ -24,7 +24,7 @@
     "contentful": "^7.13.1",
     "core-js": "^2.6.11",
     "github-calendar": "^2.2.7",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "normalize.css": "^8.0.1",
     "rxjs": "~6.5.5",
     "tslib": "^1.10.0",
