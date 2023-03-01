@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/loaderio-e9fb0421703a7f5398e7c540a1497610.txt"
+  to = "/assets/loaderio-e9fb0421703a7f5398e7c540a1497610.txt"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
